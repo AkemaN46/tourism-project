@@ -1,0 +1,187 @@
+<view class="container">
+  <!-- 民宿信息（当从首页点击进入时显示） -->
+  <view class="homestay-header" wx:if="{{!isGlobalMode && homestayId > 0 && homestayInfo.name}}">
+    <image class="homestay-bg" src="{{homestayInfo.coverImage}}" mode="aspectFill"/>
+    <view class="homestay-mask">
+      <text class="homestay-name">{{homestayInfo.name}}</text>
+      <text class="homestay-desc">{{homestayInfo.description}}</text>
+    </view>
+  </view>
+
+  <!-- 本页搜索 + 筛选条件 -->
+  <view class="search-filter-wrapper">
+    <!-- 本页搜索框 -->
+    <view class="room-search-section">
+      <view class="room-search-box">
+        <text class="room-search-icon">🔍</text>
+        <input
+          class="room-search-input"
+          placeholder="搜索房型名称"
+          value="{{searchKeyword}}"
+          bindinput="onLocalSearchInput"
+          bindconfirm="onLocalSearchConfirm"
+          confirm-type="search"
+        />
+        <text class="room-search-btn" bindtap="onLocalSearchConfirm">搜索</text>
+      </view>
+    </view>
+
+    <!-- 筛选条件 -->
+    <view class="filter-section card">
+      <view class="filter-item" bindtap="showFilterPopup">
+        <text>{{filterText}}</text>
+        <icon type="arrowdown" size="14" class="ml-10"></icon>
+      </view>
+    </view>
+  </view>
+
+  <!-- 房型列表 -->
+  <scroll-view class="room-list" scroll-y>
+    <view class="room-item card" wx:for="{{roomList}}" wx:key="id">
+      <image src="{{item.coverImage}}" class="room-image" mode="aspectFill" bindtap="goToDetail" data-id="{{item.id}}" binderror="onImageError" data-index="{{index}}"></image>
+      <view class="room-content">
+        <view class="room-homestay" wx:if="{{isGlobalMode}}" bindtap="goToDetail" data-id="{{item.id}}">
+          所属民宿：{{item.homestayName || '未知民宿'}}
+        </view>
+        <view class="room-header" bindtap="goToDetail" data-id="{{item.id}}">
+          <text class="room-name">{{item.name}}</text>
+          <text class="room-price">{{item.price}}</text>
+        </view>
+        <view class="room-stats" bindtap="goToDetail" data-id="{{item.id}}">
+          <view class="rating-tag" wx:if="{{item.homestayRating && item.homestayRating > 0}}">
+            <text class="star-icon">★</text>
+            <text class="rating-value">{{item.homestayRating}}</text>
+          </view>
+          <view class="sales-tag" wx:if="{{item.homestaySalesCount && item.homestaySalesCount > 0}}">
+            <text class="sales-text">{{item.homestaySalesCount}}+ 销量</text>
+          </view>
+        </view>
+        <view class="room-info" bindtap="goToDetail" data-id="{{item.id}}">
+          <text class="room-desc">{{item.description}}</text>
+        </view>
+        <view class="room-tags" bindtap="goToDetail" data-id="{{item.id}}">
+          <text class="tag" wx:for="{{item.tags}}" wx:key="index">{{item}}</text>
+        </view>
+        <!-- 操作按钮 -->
+        <view class="room-actions">
+          <view class="action-btn favorite-btn" bindtap="toggleFavorite" data-id="{{item.id}}">
+            <text class="action-icon">{{item.isFavorite ? '❤️' : '🤍'}}</text>
+            <text class="action-text">{{item.isFavorite ? '已收藏' : '收藏'}}</text>
+          </view>
+          <view class="action-btn cart-btn" bindtap="addToCart" data-id="{{item.id}}">
+            <text class="action-icon">🛒</text>
+            <text class="action-text">加入购物车</text>
+          </view>
+          <view class="action-btn book-btn" bindtap="goToBook" data-id="{{item.id}}">
+            <text class="action-text">立即预定</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="list-state" wx:if="{{loading && roomList.length === 0}}">正在加载房型...</view>
+    <view class="list-state retry-state" wx:elif="{{!loading && loadError}}" bindtap="retryLoad">{{errorMessage}}</view>
+    <view class="list-state" wx:elif="{{!loading && !loadError && roomList.length === 0}}">暂无可售房型</view>
+  </scroll-view>
+
+  <!-- 筛选弹窗 -->
+  <view class="popup-overlay" wx:if="{{showFilter}}" bindtap="hideFilterPopup">
+    <!-- 使用 catchtap 阻止事件冒泡到遮罩层，避免一点击选项就关闭弹窗 -->
+    <view class="popup-content" catchtap="stopPropagation">
+      <view class="popup-header">
+        <text class="popup-title">筛选条件</text>
+        <icon type="clear" size="20" bindtap="hideFilterPopup" class="close-icon"></icon>
+      </view>
+      
+      <scroll-view class="filter-options" scroll-y>
+        <!-- 床型筛选 -->
+        <view class="filter-group">
+          <view class="filter-label">
+            <text class="label-text">床型</text>
+            <text class="label-desc">选择您偏好的房间类型</text>
+          </view>
+          <view class="filter-tags">
+            <text class="tag {{currentFilter.bedType === '' ? 'tag-active' : ''}}" 
+                  bindtap="selectBedType" data-type="">全部</text>
+            <text class="tag {{currentFilter.bedType === '大床' ? 'tag-active' : ''}}" 
+                  bindtap="selectBedType" data-type="大床">大床房</text>
+            <text class="tag {{currentFilter.bedType === '双床' ? 'tag-active' : ''}}" 
+                  bindtap="selectBedType" data-type="双床">双床房</text>
+            <text class="tag {{currentFilter.bedType === '家庭' ? 'tag-active' : ''}}" 
+                  bindtap="selectBedType" data-type="家庭">家庭套房</text>
+          </view>
+        </view>
+        
+        <!-- 价格筛选 -->
+        <view class="filter-group">
+          <view class="filter-label">
+            <text class="label-text">价格范围</text>
+            <text class="label-desc">拖动滑块或输入价格</text>
+          </view>
+          
+          <!-- 价格滑动条 -->
+          <view class="price-slider-container">
+            <view class="price-display">
+              <text class="price-text">¥{{currentFilter.minPrice}} - ¥{{currentFilter.maxPrice}}</text>
+            </view>
+            <slider 
+              class="price-slider"
+              min="0" 
+              max="800" 
+              value="{{sliderValue}}"
+              bindchanging="onPriceChanging"
+              bindchange="onPriceChange"
+              show-value="false"
+              block-size="16"
+              block-color="#409EFF"
+              activeColor="#409EFF"
+              backgroundColor="#e4e7ed"
+              step="10">
+            </slider>
+          </view>
+          
+          <!-- 价格输入框 -->
+          <view class="price-input-container">
+            <view class="price-input-group">
+              <text class="input-label">最低价</text>
+              <input 
+                class="price-input" 
+                type="number" 
+                value="{{currentFilter.minPrice}}" 
+                bindinput="onMinPriceInput"
+                placeholder="0">
+              </input>
+            </view>
+            <text class="price-separator">-</text>
+            <view class="price-input-group">
+              <text class="input-label">最高价</text>
+              <input 
+                class="price-input" 
+                type="number" 
+                value="{{currentFilter.maxPrice}}" 
+                bindinput="onMaxPriceInput"
+                placeholder="800">
+              </input>
+            </view>
+          </view>
+          
+          <!-- 预设价格范围 -->
+          <view class="filter-tags price-tags">
+            <text class="tag {{currentFilter.priceRange === '' ? 'tag-active' : ''}}" 
+                  bindtap="selectPriceRange" data-range="">不限</text>
+            <text class="tag {{currentFilter.priceRange === '0-300' ? 'tag-active' : ''}}" 
+                  bindtap="selectPriceRange" data-range="0-300">0-300</text>
+            <text class="tag {{currentFilter.priceRange === '300-600' ? 'tag-active' : ''}}" 
+                  bindtap="selectPriceRange" data-range="300-600">300-600</text>
+            <text class="tag {{currentFilter.priceRange === '600+' ? 'tag-active' : ''}}" 
+                  bindtap="selectPriceRange" data-range="600+">600以上</text>
+          </view>
+        </view>
+      </scroll-view>
+      
+      <view class="popup-footer">
+        <button class="reset-btn" bindtap="resetFilter">重置</button>
+        <button class="confirm-btn" bindtap="confirmFilter">确定</button>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,19 @@
+- title: "1.管理员上传 JPG 图片"
+  keyword: upload_image
+  method: POST
+  url: /upload/image
+  field_name: file
+  file_name: api-auto.jpg
+  content_type: image/jpeg
+  expect:
+    code: 200
+
+- title: "2.管理员上传非图片文件失败"
+  keyword: upload_image
+  method: POST
+  url: /upload/image
+  field_name: file
+  file_name: api-auto.txt
+  content_type: text/plain
+  expect:
+    code: 400

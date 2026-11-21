@@ -1,0 +1,6 @@
+{
+  "usingComponents": {},
+  "navigationBarTitleText": "旅游资讯",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark"
+}

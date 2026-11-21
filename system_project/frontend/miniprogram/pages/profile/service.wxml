@@ -1,0 +1,32 @@
+<view class="container">
+  <view class="service-title">联系我们</view>
+  
+  <view class="service-desc">我们随时为您提供帮助</view>
+  
+  <!-- 客服选项 -->
+  <view class="service-options">
+    <view 
+      class="service-item" 
+      wx:for="{{serviceOptions}}" 
+      wx:key="id"
+      bindtap="contactService"
+      data-id="{{item.id}}"
+    >
+      <view class="service-left">
+        <image class="service-icon" src="{{item.icon}}"></image>
+        <view class="service-info">
+          <text class="service-title">{{item.title}}</text>
+          <text class="service-desc">{{item.desc}}</text>
+        </view>
+      </view>
+      <image class="service-arrow" src="/assets/icons/arrow-right-gray.png"></image>
+    </view>
+  </view>
+  
+  <!-- 客服热线 -->
+  <view class="hotline-section">
+    <view class="hotline-title">客服热线</view>
+    <view class="hotline-number">400-123-4567</view>
+    <view class="hotline-desc">服务时间：9:00-18:00（周一至周日）</view>
+  </view>
+</view>

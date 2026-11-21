@@ -1,0 +1,96 @@
+<view class="page-container">
+  <!-- 资讯封面 -->
+  <view class="cover-section">
+    <image src="{{news.coverImage}}" class="cover-image" mode="aspectFill"></image>
+    <view class="cover-mask">
+      <view class="back-btn" bindtap="goBack">
+        <text class="back-icon">←</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 资讯内容 -->
+  <view class="content-wrapper">
+    <!-- 标题信息 -->
+    <view class="article-header">
+      <text class="article-title">{{news.title}}</text>
+      <text class="article-subtitle" wx:if="{{news.subtitle}}">{{news.subtitle}}</text>
+      
+      <view class="meta-info">
+        <view class="author-section">
+          <image src="/assets/icons/user.png" class="author-avatar"></image>
+          <view class="author-detail">
+            <text class="author-name">{{news.author || '匿名'}}</text>
+            <text class="publish-time">{{news.publishedAt}}</text>
+          </view>
+        </view>
+        
+        <view class="stats-section">
+          <view class="stat-item">
+            <text class="stat-icon">👁</text>
+            <text class="stat-text">{{news.viewCount || 0}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 分割线 -->
+    <view class="divider"></view>
+
+    <!-- 正文内容 -->
+    <view class="article-content">
+      <rich-text nodes="{{news.content}}" class="rich-text"></rich-text>
+    </view>
+
+    <!-- 标签 -->
+    <view class="tags-section" wx:if="{{news.tags}}">
+      <view class="tag" wx:for="{{news.tags}}" wx:key="*this">
+        <text class="tag-text">#{{item}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 相关推荐 -->
+  <view class="recommend-section" wx:if="{{relatedNews.length > 0}}">
+    <view class="section-header">
+      <text class="section-title">相关推荐</text>
+      <text class="section-more">更多 ></text>
+    </view>
+    
+    <scroll-view class="recommend-scroll" scroll-x show-scrollbar="{{false}}">
+      <view class="recommend-list">
+        <view class="recommend-card" wx:for="{{relatedNews}}" wx:key="id" bindtap="goToDetail" data-id="{{item.id}}">
+          <image src="{{item.coverImage}}" class="recommend-cover" mode="aspectFill"></image>
+          <view class="recommend-info">
+            <text class="recommend-title">{{item.title}}</text>
+            <view class="recommend-meta">
+              <text class="recommend-author">{{item.author || '匿名'}}</text>
+              <text class="recommend-view">{{item.viewCount || 0}} 浏览</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+
+  <!-- 底部操作栏 -->
+  <view class="action-bar">
+    <view class="action-left">
+      <view class="action-btn">
+        <text class="action-icon">♥</text>
+        <text class="action-text">收藏</text>
+      </view>
+      <view class="action-btn">
+        <text class="action-icon">💬</text>
+        <text class="action-text">评论</text>
+      </view>
+      <view class="action-btn">
+        <text class="action-icon">🔗</text>
+        <text class="action-text">分享</text>
+      </view>
+    </view>
+    <view class="primary-btn">
+      <text class="primary-text">立即预订</text>
+    </view>
+  </view>
+</view>

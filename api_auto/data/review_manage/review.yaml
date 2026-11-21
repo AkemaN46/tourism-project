@@ -1,0 +1,79 @@
+- title: "1.已完成订单提交评价"
+  keyword: create_review
+  method: POST
+  url: /review/create
+  order_data:
+    roomId: 1
+    checkInDate: "2027-02-05"
+    checkOutDate: "2027-02-07"
+    contactName: "自动化测试"
+    contactPhone: "13800138010"
+    remark: "评价前置订单"
+  review_data:
+    rating: 5
+    content: "接口自动化测试评价"
+    images: []
+  expect:
+    code: 200
+
+- title: "1.管理员审核通过评价"
+  keyword: approve_review
+  method: POST
+  url: /review/{id}/approve
+  order_data:
+    roomId: 2
+    checkInDate: "2027-02-08"
+    checkOutDate: "2027-02-10"
+    contactName: "自动化测试"
+    contactPhone: "13800138011"
+    remark: "审核通过前置订单"
+  review_data:
+    rating: 4
+    content: "审核通过的自动化评价"
+    images: []
+  expect:
+    code: 200
+
+- title: "1.管理员驳回后用户修改评价"
+  keyword: reject_update_review
+  reject_method: POST
+  reject_url: /review/{id}/reject
+  update_method: PUT
+  update_url: /review/{id}/update
+  order_data:
+    roomId: 3
+    checkInDate: "2027-02-11"
+    checkOutDate: "2027-02-13"
+    contactName: "自动化测试"
+    contactPhone: "13800138012"
+    remark: "驳回评价前置订单"
+  review_data:
+    rating: 3
+    content: "待驳回的自动化评价"
+    images: []
+  reject_data:
+    reason: "自动化测试驳回原因"
+  update_data:
+    rating: 5
+    content: "修改后的自动化评价"
+    images: []
+  expect:
+    code: 200
+
+- title: "1.用户删除自己的评价"
+  keyword: delete_review
+  method: DELETE
+  url: /review/{id}/delete
+  order_data:
+    roomId: 4
+    checkInDate: "2027-02-14"
+    checkOutDate: "2027-02-16"
+    contactName: "自动化测试"
+    contactPhone: "13800138013"
+    remark: "删除评价前置订单"
+  review_data:
+    rating: 5
+    content: "待删除的自动化评价"
+    images: []
+  expect:
+    code: 200

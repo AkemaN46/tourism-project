@@ -1,0 +1,49 @@
+<view class="container">
+  <view class="order-title">批量预订</view>
+  
+  <!-- 订单列表 -->
+  <view class="order-list">
+    <view class="order-item" wx:for="{{cartItems}}" wx:key="id">
+      <view class="room-info">
+        <image class="room-image" src="{{item.coverImage}}" mode="aspectFill"></image>
+        <view class="room-details">
+          <text class="room-name">{{item.roomName}}</text>
+          <text class="room-date">{{item.checkInDate}} 至 {{item.checkOutDate}} ({{item.nights}}晚)</text>
+          <text class="room-price">¥{{item.total}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  
+  <!-- 联系人信息 -->
+  <view class="section-title">
+    <text class="title-text">联系人信息</text>
+  </view>
+  <view class="card form-section">
+    <view class="form-item">
+      <text class="label">姓名</text>
+      <input class="input" placeholder="请输入入住人姓名" value="{{contactName}}" bindinput="onContactNameInput" maxlength="20" />
+    </view>
+    <view class="form-item">
+      <text class="label">手机</text>
+      <input class="input" placeholder="请输入手机号码" value="{{contactPhone}}" bindinput="onContactPhoneInput" type="number" maxlength="11" />
+    </view>
+    <view class="form-item">
+      <text class="label">备注</text>
+      <textarea class="textarea" placeholder="如有特殊要求请备注" value="{{remark}}" bindinput="onRemarkInput" maxlength="200" />
+    </view>
+  </view>
+  
+  <!-- 价格汇总 -->
+  <view class="price-summary">
+    <view class="summary-row">
+      <text>总计</text>
+      <text class="total-price">¥{{totalPrice}}</text>
+    </view>
+  </view>
+  
+  <!-- 支付按钮 -->
+  <view class="pay-section">
+    <button class="pay-btn" bindtap="payNow">立即支付 ¥{{totalPrice}}</button>
+  </view>
+</view>

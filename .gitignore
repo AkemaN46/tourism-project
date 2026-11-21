@@ -1,0 +1,70 @@
+# Only project deliverables belong at the repository root.
+/*
+!/.gitignore
+!/.gitattributes
+!/README.md
+!/system_project/
+!/api_auto/
+!/ai_test/
+!/doc/
+
+# Codex / agent workspaces and temporary artifact tooling
+.codex*/
+.agents/
+AGENTS.md
+AGENTS.override.md
+.openai/
+.tmp*/
+.xmind_check/
+work/
+outputs/
+.github/modernize/
+*.inspect.ndjson
+*.code-workspace
+
+# Editor settings and local developer state
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+project.private.config.json
+
+# Dependencies, build output, caches and logs
+node_modules/
+target/
+dist/
+build/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+*.log
+*.pid
+*.class
+*.jar
+*.war
+~$*
+*.tmp
+*.bak
+*.before-*.jmx
+
+# Local credentials: copy the committed examples to configure a new checkout.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+token_cache.json
+/api_auto/config.py
+/system_project/backend/src/main/resources/application.yml
+/system_project/backend/src/main/resources/application-local.*
+/doc/xn_data/auth.csv
+
+# Runtime uploads and regenerated reports (curated test documents are retained)
+/system_project/backend/uploads/
+/api_auto/log/
+/api_auto/report/
+/ai_test/reports/
+/doc/xn_report/
+/doc/xn_report_*/

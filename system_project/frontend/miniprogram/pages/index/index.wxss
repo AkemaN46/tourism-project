@@ -1,0 +1,319 @@
+/* index.wxss */
+.container {
+  background-color: #f5f7fa;
+  min-height: 100vh;
+  padding-bottom: 40rpx;
+}
+
+.banner-swiper {
+  height: 350rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.05);
+}
+
+.banner-image {
+  width: 100%;
+  height: 100%;
+}
+
+.search-section {
+  margin: 20rpx;
+  padding: 20rpx;
+  background-color: #fff;
+  border-radius: 12rpx;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.05);
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background-color: #f8f9fa;
+  border-radius: 50rpx;
+  padding: 15rpx 20rpx;
+}
+
+.search-icon {
+  margin-right: 10rpx;
+  color: #909399;
+}
+
+.search-input {
+  flex: 1;
+  background: transparent;
+  font-size: 28rpx;
+  color: #303133;
+}
+
+.quick-links {
+  display: flex;
+  justify-content: space-around;
+  padding: 30rpx 0;
+  background-color: #fff;
+  margin: 20rpx;
+  border-radius: 12rpx;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.05);
+}
+
+.link-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+}
+
+.link-icon {
+  width: 80rpx;
+  height: 80rpx;
+  margin-bottom: 10rpx;
+  border-radius: 50%;
+  background-color: #f0f9ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.link-icon image {
+  width: 48rpx;
+  height: 48rpx;
+}
+
+.link-text {
+  font-size: 24rpx;
+  color: #606266;
+}
+
+.section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20rpx;
+  margin: 30rpx 20rpx 20rpx;
+}
+
+.title-text {
+  font-size: 34rpx;
+  font-weight: 600;
+  color: #303133;
+}
+
+.more-text {
+  color: #909399;
+  font-size: 26rpx;
+}
+
+/* 推荐民宿网格布局 - 一行两个 */
+.homestay-grid {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 20rpx 20rpx;
+  justify-content: space-between;
+}
+
+.homestay-item {
+  width: calc(50% - 10rpx);
+  margin-bottom: 20rpx;
+  border-radius: 16rpx;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.08);
+}
+
+.homestay-item:active {
+  transform: scale(0.98);
+}
+
+.homestay-image {
+  width: 100%;
+  height: 200rpx;
+}
+
+.homestay-info {
+  padding: 16rpx;
+}
+
+.homestay-name {
+  display: block;
+  font-size: 28rpx;
+  font-weight: 600;
+  margin-bottom: 8rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #303133;
+}
+
+.homestay-price {
+  color: #FF6B35;
+  font-size: 26rpx;
+  font-weight: 600;
+}
+
+/* 房型列表样式（横向滚动） */
+.room-list {
+  display: flex;
+  white-space: nowrap;
+  padding: 0 20rpx 20rpx;
+  overflow-x: auto;
+}
+
+.room-item {
+  width: 300rpx;
+  margin-right: 20rpx;
+  border-radius: 16rpx;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.08);
+}
+
+.room-image {
+  width: 100%;
+  height: 220rpx;
+}
+
+.room-info {
+  padding: 24rpx;
+}
+
+.room-name {
+  display: block;
+  font-size: 30rpx;
+  font-weight: 600;
+  margin-bottom: 8rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #303133;
+}
+
+.room-price {
+  color: #FF6B35;
+  font-size: 28rpx;
+  font-weight: 600;
+}
+
+.room-price::before {
+  content: '¥';
+  font-size: 24rpx;
+  margin-right: 4rpx;
+}
+
+.news-list {
+  padding: 0 20rpx 30rpx;
+}
+
+.news-item {
+  display: flex;
+  margin-bottom: 16rpx;
+  padding: 16rpx;
+  background-color: #fff;
+  border-radius: 12rpx;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.06);
+  transition: all 0.2s ease;
+  border: 1rpx solid #f0f2f5;
+}
+
+.news-item:active {
+  transform: scale(0.98);
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.1);
+  background-color: #fafafa;
+}
+
+/* 资讯列表现代化紧凑样式 */
+.news-left {
+  width: 120rpx;
+  height: 120rpx;
+  margin-right: 16rpx;
+  flex-shrink: 0;
+}
+
+.news-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 8rpx;
+  background-color: #f5f7fa;
+  border: 1rpx solid #ebeef5;
+  object-fit: cover;
+  position: relative;
+}
+
+.news-image::after {
+  content: '📷';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24rpx;
+  color: #c0c4cc;
+  opacity: 0.6;
+}
+
+.news-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.news-title {
+  font-size: 28rpx;
+  font-weight: 500;
+  margin-bottom: 8rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  color: #303133;
+  line-height: 1.3;
+}
+
+.news-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20rpx;
+  color: #909399;
+}
+
+.news-category {
+  background-color: #f0f9ff;
+  color: #409EFF;
+  padding: 2rpx 8rpx;
+  border-radius: 12rpx;
+  font-size: 18rpx;
+}
+
+.news-time {
+  color: #c0c4cc;
+}
+
+.news-view {
+  display: flex;
+  align-items: center;
+  color: #c0c4cc;
+}
+
+.news-view::before {
+  content: '👁';
+  margin-right: 4rpx;
+  font-size: 18rpx;
+}
+
+/* 移除旧的样式 */
+.news-item::before {
+  display: none;
+}
+
+.news-item:active::before {
+  display: none;
+}
+
+.news-content {
+  display: none;
+}
+
+.news-desc {
+  display: none;
+}
+
+.mt-20 {
+  margin-top: 20rpx;
+}

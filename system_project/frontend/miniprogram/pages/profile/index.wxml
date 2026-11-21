@@ -1,0 +1,112 @@
+<view class="container">
+  <!-- 顶部用户信息 -->
+  <view class="user-header" bindtap="goToUserInfo">
+    <view class="user-bg"></view>
+    <view class="user-info-content">
+      <image 
+        class="user-avatar" 
+        src="{{userInfo.avatarUrl || '/assets/icons/default-avatar.png'}}"
+      ></image>
+      <view class="user-details">
+        <text class="user-name">{{userInfo.nickname || userInfo.nickName || '点击登录'}}</text>
+        <text class="user-id" wx:if="{{userInfo.id}}">ID: {{userInfo.id}}</text>
+        <view class="user-tags">
+          <text class="user-tag vip-tag" wx:if="{{userInfo.vipLevel}}">VIP{{userInfo.vipLevel}}</text>
+          <text class="user-tag member-tag">普通会员</text>
+        </view>
+      </view>
+      <view class="user-arrow">
+        <image src="/assets/icons/arrow-right.png"></image>
+      </view>
+    </view>
+  </view>
+
+  <!-- 快捷数据 -->
+  <view class="quick-stats card">
+    <view 
+      class="stat-item" 
+      bindtap="handleQuickAction" 
+      data-type="orders"
+    >
+      <text class="stat-value">{{quickStats.orders}}</text>
+      <text class="stat-label">待处理</text>
+    </view>
+    <view 
+      class="stat-item" 
+      bindtap="handleQuickAction" 
+      data-type="coupons"
+    >
+      <text class="stat-value">{{quickStats.coupons}}</text>
+      <text class="stat-label">优惠券</text>
+    </view>
+    <view 
+      class="stat-item" 
+      bindtap="handleQuickAction" 
+      data-type="points"
+    >
+      <text class="stat-value">{{quickStats.points}}</text>
+      <text class="stat-label">积分</text>
+    </view>
+    <view 
+      class="stat-item" 
+      bindtap="handleQuickAction" 
+      data-type="wallet"
+    >
+      <text class="stat-value">¥{{quickStats.balance}}</text>
+      <text class="stat-label">余额</text>
+    </view>
+  </view>
+
+  <!-- 功能菜单 -->
+  <view class="menu-section">
+    <view class="section-title">我的服务</view>
+    <view class="menu-grid">
+      <view 
+        class="menu-item" 
+        wx:for="{{menuList}}" 
+        wx:key="id"
+        bindtap="handleMenuTap"
+        data-id="{{item.id}}"
+        data-url="{{item.url}}"
+        data-type="{{item.type}}"
+      >
+        <view class="menu-icon">
+          <image src="{{item.icon}}"></image>
+          <view class="badge" wx:if="{{item.badge}}">{{item.badge}}</view>
+        </view>
+        <text class="menu-text">{{item.name}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 工具服务 -->
+  <view class="tools-section">
+    <view class="section-title">工具与服务</view>
+    <view class="tools-list card">
+      <view 
+        class="tool-item" 
+        wx:for="{{tools}}" 
+        wx:key="name"
+        bindtap="handleMenuTap"
+        data-type="{{item.type}}"
+        data-url="{{item.url}}"
+      >
+        <view class="tool-left">
+          <image class="tool-icon" src="{{item.icon}}"></image>
+          <text class="tool-text">{{item.name}}</text>
+        </view>
+        <image class="tool-arrow" src="/assets/icons/arrow-right-gray.png"></image>
+      </view>
+    </view>
+  </view>
+
+  <!-- 退出登录 -->
+  <view class="logout-section" wx:if="{{userInfo.id}}">
+    <button class="logout-btn" bindtap="logout">退出登录</button>
+  </view>
+
+  <!-- 引导登录提示 -->
+  <view class="login-tip" wx:if="{{!userInfo.id}}">
+    <text>登录后享受完整服务</text>
+  </view>
+</view>

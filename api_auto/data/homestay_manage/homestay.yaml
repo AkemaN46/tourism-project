@@ -1,0 +1,73 @@
+- title: "1.管理员创建民宿"
+  keyword: create_homestay
+  method: POST
+  url: /homestay/create
+  json_data:
+    name: "自动化测试民宿"
+    phone: "029-12345678"
+    address: "西安市雁塔区自动化测试路100号"
+    description: "接口自动化创建的民宿"
+    coverImage: "/images/api-auto-homestay.jpg"
+    status: 1
+  expect:
+    code: 200
+
+- title: "2.民宿名称过短创建失败"
+  keyword: create_homestay
+  method: POST
+  url: /homestay/create
+  json_data:
+    name: "测"
+    address: "西安市雁塔区自动化测试路100号"
+    status: 1
+  expect:
+    code: 400
+
+- title: "1.管理员修改民宿信息"
+  keyword: update_homestay
+  method: PUT
+  url: /homestay/update/{id}
+  create_data:
+    name: "待修改自动化民宿"
+    phone: "029-12345678"
+    address: "西安市雁塔区自动化测试路101号"
+    description: "修改民宿前置数据"
+    coverImage: "/images/api-auto-homestay.jpg"
+    status: 1
+  json_data:
+    name: "自动化测试民宿已更新"
+    phone: "029-87654321"
+    address: "西安市雁塔区自动化测试路102号"
+    description: "接口自动化更新的民宿"
+    coverImage: "/images/api-auto-homestay-update.jpg"
+    status: 1
+  expect:
+    code: 200
+
+- title: "1.管理员下架后恢复上架民宿"
+  keyword: toggle_homestay
+  method: PUT
+  url: /homestay/toggleStatus/{id}
+  create_data:
+    name: "待上下架自动化民宿"
+    phone: "029-12345678"
+    address: "西安市雁塔区自动化测试路103号"
+    description: "上下架民宿前置数据"
+    coverImage: "/images/api-auto-homestay.jpg"
+    status: 1
+  expect:
+    code: 200
+
+- title: "1.管理员删除民宿"
+  keyword: delete_homestay
+  method: DELETE
+  url: /homestay/delete/{id}
+  create_data:
+    name: "待删除自动化民宿"
+    phone: "029-12345678"
+    address: "西安市雁塔区自动化测试路104号"
+    description: "删除民宿前置数据"
+    coverImage: "/images/api-auto-delete.jpg"
+    status: 1
+  expect:
+    code: 200

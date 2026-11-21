@@ -1,0 +1,25 @@
+- title: "1.用户收藏可售房型"
+  keyword: add_favorite
+  method: POST
+  url: /favorite/add
+  json_data:
+    roomId: 1
+  expect:
+    code: 200
+
+- title: "2.不存在房型不能收藏"
+  keyword: add_favorite
+  method: POST
+  url: /favorite/add
+  json_data:
+    roomId: 999999
+  expect:
+    code: 404
+
+- title: "1.用户取消收藏房型"
+  keyword: remove_favorite
+  method: POST
+  url: /favorite/remove
+  room_id: 2
+  expect:
+    code: 200

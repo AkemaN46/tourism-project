@@ -1,0 +1,27 @@
+<!--pages/login/index.wxml-->
+<view class="container flex-container">
+  <view class="login-box">
+    <image class="logo" src="/assets/icons/avatar.png" mode="aspectFit"></image>
+    <text class="app-name">汐岸小筑</text>
+    <text class="app-slogan">遇见山海，邂逅美好</text>
+    
+    <!-- 核心修改：将 getUserProfile 直接绑定到按钮的 open-type 和回调 -->
+    <button 
+      class="login-btn" 
+      open-type="getUserInfo" 
+      bindgetuserinfo="onGetUserInfo"
+      bindtap="preLoginCheck"
+    >
+      <image class="wx-icon" src="/assets/icons/wechat.png"></image>
+      <text>微信一键登录</text>
+    </button>
+    
+    <view class="agreement">
+      <checkbox checked="{{isAgree}}" bindtap="toggleAgree"/>
+      <text class="agree-text">登录即表示您同意</text>
+      <text class="link" bindtap="showUserAgreement">《用户协议》</text>
+      <text>和</text>
+      <text class="link" bindtap="showPrivacyPolicy">《隐私政策》</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,30 @@
+- title: "1.用户修改个人资料"
+  keyword: update_user
+  method: POST
+  url: /user/update
+  json_data:
+    nickname: "自动化测试用户"
+    gender: 1
+    birthday: "1998-01-01"
+    phone: "13800138100"
+    email: "api-auto@example.com"
+  expect:
+    code: 200
+
+- title: "2.生日格式错误修改资料失败"
+  keyword: update_user
+  method: POST
+  url: /user/update
+  json_data:
+    birthday: "1998/01/01"
+  expect:
+    code: 400
+
+- title: "1.管理员禁用用户后恢复启用"
+  keyword: update_user_status
+  method: PUT
+  url: /user/{id}/status
+  json_data:
+    status: 0
+  expect:
+    code: 200

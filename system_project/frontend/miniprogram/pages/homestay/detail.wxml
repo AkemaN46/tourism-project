@@ -1,0 +1,11 @@
+<view class="page" wx:if="{{item}}">
+  <image class="cover" src="{{item.coverImage}}" mode="aspectFill"/>
+  <view class="content">
+    <text class="name">{{item.name}}</text>
+    <text class="address">📍 {{item.address}}</text>
+    <view class="meta"><text>★ {{item.rating || 0}}</text><text>{{item.salesCount || 0}} 人预订</text></view>
+    <text class="desc">{{item.description || '暂无介绍'}}</text>
+    <text class="phone" wx:if="{{item.phone}}">联系电话：{{item.phone}}</text>
+  </view>
+  <button class="button" bindtap="viewRooms">查看可订房型</button>
+</view>

@@ -1,0 +1,111 @@
+- title: "1.正常创建单个订单"
+  keyword: create_order
+  method: POST
+  url: /order/create
+  json_data:
+    roomId: 1
+    checkInDate: "2027-01-03"
+    checkOutDate: "2027-01-07"
+    contactName: "自动化测试"
+    contactPhone: "13800138000"
+    remark: "接口自动化创建订单"
+  expect:
+    code: 200
+
+- title: "2.不存在房型创建订单失败"
+  keyword: create_order
+  method: POST
+  url: /order/create
+  json_data:
+    roomId: 999999
+    checkInDate: "2027-01-03"
+    checkOutDate: "2027-01-07"
+    contactName: "自动化测试"
+    contactPhone: "13800138000"
+    remark: "异常下单"
+  expect:
+    code: 404
+
+- title: "1.批量创建两个订单"
+  keyword: batch_create
+  method: POST
+  url: /order/batch-create
+  json_data:
+    orders:
+      - roomId: 2
+        checkInDate: "2027-01-10"
+        checkOutDate: "2027-01-12"
+        contactName: "自动化测试"
+        contactPhone: "13800138001"
+        remark: "批量下单-1"
+      - roomId: 3
+        checkInDate: "2027-01-13"
+        checkOutDate: "2027-01-15"
+        contactName: "自动化测试"
+        contactPhone: "13800138001"
+        remark: "批量下单-2"
+  expect:
+    code: 200
+
+- title: "1.用户支付待支付订单"
+  keyword: pay_order
+  method: PUT
+  url: /order/{id}/status
+  json_data:
+    status: 1
+  order_data:
+    roomId: 4
+    checkInDate: "2027-01-17"
+    checkOutDate: "2027-01-19"
+    contactName: "自动化测试"
+    contactPhone: "13800138002"
+    remark: "支付订单"
+  expect:
+    code: 200
+
+- title: "2.用户无权将待支付订单改为入住"
+  keyword: pay_order
+  method: PUT
+  url: /order/{id}/status
+  json_data:
+    status: 2
+  order_data:
+    roomId: 5
+    checkInDate: "2027-01-21"
+    checkOutDate: "2027-01-23"
+    contactName: "自动化测试"
+    contactPhone: "13800138003"
+    remark: "越权更新订单"
+  expect:
+    code: 403
+
+- title: "1.用户取消待支付订单"
+  keyword: cancel_order
+  method: PUT
+  url: /order/{id}/cancel
+  json_data:
+    reason: "自动化测试取消"
+  order_data:
+    roomId: 6
+    checkInDate: "2027-01-25"
+    checkOutDate: "2027-01-27"
+    contactName: "自动化测试"
+    contactPhone: "13800138004"
+    remark: "取消订单"
+  expect:
+    code: 200
+
+- title: "1.管理员办理入住并完成订单"
+  keyword: complete_order
+  method: PUT
+  url: /order/{id}/status
+  statuses: [2, 3]
+  order_data:
+    roomId: 7
+    checkInDate: "2027-02-01"
+    checkOutDate: "2027-02-03"
+    contactName: "自动化测试"
+    contactPhone: "13800138005"
+    remark: "完成订单"
+  expect:
+    code: 200

@@ -1,0 +1,40 @@
+<view class="container">
+  <view class="card feedback-type">
+    <view class="section-title">反馈类型</view>
+    <view class="type-list">
+      <view 
+        class="type-item {{item.selected ? 'selected' : ''}}" 
+        wx:for="{{feedbackTypes}}" 
+        wx:key="id"
+        bindtap="selectType"
+        data-id="{{item.id}}"
+      >
+        <text>{{item.name}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="card feedback-content">
+    <view class="section-title">反馈内容</view>
+    <textarea 
+      class="content-input" 
+      placeholder="请详细描述您的问题或建议"
+      maxlength="500"
+      bindinput="onContentInput"
+      value="{{content}}"
+    />
+    <view class="word-count">{{content.length}}/500</view>
+  </view>
+
+  <view class="card contact-info">
+    <view class="section-title">联系方式（选填）</view>
+    <input 
+      class="contact-input" 
+      placeholder="QQ、微信或手机号"
+      bindinput="onContactInput"
+      value="{{contact}}"
+    />
+  </view>
+
+  <button class="submit-btn" bindtap="submitFeedback">提交反馈</button>
+</view>

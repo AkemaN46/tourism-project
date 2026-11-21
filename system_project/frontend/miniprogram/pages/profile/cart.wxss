@@ -1,0 +1,129 @@
+/* cart.wxss */
+.cart-list {
+  height: calc(100vh - 100rpx);
+}
+
+.cart-item {
+  margin: 20rpx;
+  padding: 0;
+  overflow: hidden;
+}
+
+.item-header {
+  display: flex;
+  align-items: center;
+  padding: 20rpx;
+  border-bottom: 1rpx solid #f5f5f5;
+}
+
+.room-image {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 10rpx;
+  margin: 0 20rpx;
+}
+
+.room-info {
+  flex: 1;
+}
+
+.room-name {
+  display: block;
+  font-size: 28rpx;
+  font-weight: bold;
+  margin-bottom: 10rpx;
+}
+
+.room-price {
+  color: #F56C6C;
+  font-size: 24rpx;
+  font-weight: bold;
+}
+
+.item-content {
+  padding: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stay-time {
+  font-size: 24rpx;
+  color: #909399;
+}
+
+.item-actions {
+  display: flex;
+}
+
+.action-btn {
+  font-size: 24rpx;
+  padding: 10rpx 20rpx;
+  border-radius: 30rpx;
+  background-color: white;
+  border: 1rpx solid #dcdfe6;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 500rpx;
+}
+
+.empty-icon {
+  width: 200rpx;
+  height: 200rpx;
+  margin-bottom: 30rpx;
+}
+
+.empty-text {
+  color: #909399;
+  font-size: 28rpx;
+}
+
+/* 底部结算栏 */
+.checkout-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100rpx;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  padding: 0 20rpx;
+  box-shadow: 0 -2rpx 12rpx rgba(0, 0, 0, 0.1);
+}
+
+.select-all {
+  display: flex;
+  align-items: center;
+  margin-right: 20rpx;
+}
+
+.total-info {
+  flex: 1;
+  text-align: right;
+  margin-right: 20rpx;
+}
+
+.total-text {
+  font-size: 24rpx;
+  color: #909399;
+}
+
+.total-price {
+  font-size: 32rpx;
+  color: #F56C6C;
+  font-weight: bold;
+}
+
+.checkout-btn {
+  background-color: #409EFF;
+  color: white;
+  border-radius: 50rpx;
+  padding: 20rpx 30rpx;
+  font-size: 28rpx;
+}

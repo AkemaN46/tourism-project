@@ -1,0 +1,47 @@
+<view class="container">
+  <!-- 钱包余额 -->
+  <view class="card balance-card">
+    <view class="balance-header">
+      <text class="balance-label">账户余额</text>
+      <text class="balance-amount">¥{{walletBalance}}</text>
+    </view>
+    <view class="balance-actions">
+      <button class="balance-btn recharge-btn" bindtap="handleRecharge">充值</button>
+      <button class="balance-btn withdraw-btn" bindtap="handleWithdraw">提现</button>
+    </view>
+  </view>
+
+  <!-- 积分和优惠券 -->
+  <view class="card assets-card">
+    <view class="asset-item">
+      <text class="asset-value">{{points}}</text>
+      <text class="asset-label">积分</text>
+    </view>
+    <view class="asset-item">
+      <text class="asset-value">{{coupons}}</text>
+      <text class="asset-label">优惠券</text>
+    </view>
+  </view>
+
+  <!-- 交易记录 -->
+  <view class="card transaction-card">
+    <view class="section-header">
+      <text class="section-title">交易记录</text>
+      <text class="view-all" bindtap="viewTransactions">查看全部</text>
+    </view>
+    <view class="transaction-list">
+      <view class="empty-state" wx:if="{{transactions.length === 0}}">
+        <text>暂无交易记录</text>
+      </view>
+      <view class="transaction-item" wx:for="{{transactions}}" wx:key="id">
+        <view class="transaction-info">
+          <text class="transaction-desc">{{item.description}}</text>
+          <text class="transaction-time">{{item.time}}</text>
+        </view>
+        <text class="transaction-amount {{item.type === 'income' ? 'positive' : 'negative'}}">
+          {{item.amount}}
+        </text>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,148 @@
+<view class="container">
+  <!-- 入住信息 -->
+  <view class="section-title">
+    <text class="title-text">入住信息</text>
+  </view>
+  <view class="card date-info-card" bindtap="showDatePicker">
+    <view class="date-info-content">
+      <view class="date-info-item left">
+        <text class="date-label">入住</text>
+        <text class="date-value">{{formatDisplayDate(startDate)}}</text>
+        <text class="date-week">{{getWeekDay(startDate)}} 14:00</text>
+      </view>
+      <view class="date-nights">
+        <view class="nights-box">
+          <text class="nights-count">共{{nightCount}}晚</text>
+        </view>
+        <view class="arrow-hint">点击修改</view>
+      </view>
+      <view class="date-info-item right">
+        <text class="date-label">离店</text>
+        <text class="date-value">{{formatDisplayDate(endDate)}}</text>
+        <text class="date-week">{{getWeekDay(endDate)}} 12:00</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 房间信息 -->
+  <view class="section-title mt-20">
+    <text class="title-text">房间信息</text>
+  </view>
+  <view class="room-info card flex items-center">
+    <image src="{{room.coverImage}}" class="room-image" mode="aspectFill" style="width: 120rpx; height: 120rpx; border-radius: 12rpx;"></image>
+    <view class="room-details flex-1 ml-16">
+      <text class="room-name" style="font-size: 30rpx; font-weight: 500;">{{room.name}}</text>
+      <text class="room-price price price-large mt-10">¥{{room.price}}/晚</text>
+    </view>
+  </view>
+
+  <!-- 联系人信息 -->
+  <view class="section-title mt-20">
+    <text class="title-text">联系人信息</text>
+  </view>
+  <view class="card form-section">
+    <view class="form-item">
+      <text class="label">姓名</text>
+      <input class="input" placeholder="请输入入住人姓名" value="{{contactName}}" bindinput="onContactNameInput" maxlength="20" />
+    </view>
+    <view class="form-item">
+      <text class="label">手机</text>
+      <input class="input" placeholder="请输入手机号码" value="{{contactPhone}}" bindinput="onContactPhoneInput" type="number" maxlength="11" />
+    </view>
+    <view class="form-item">
+      <text class="label">备注</text>
+      <textarea class="textarea" placeholder="如有特殊要求请备注" value="{{remark}}" bindinput="onRemarkInput" maxlength="200" />
+    </view>
+  </view>
+
+  <!-- 价格明细 -->
+  <view class="section-title mt-20">
+    <text class="title-text">价格明细</text>
+  </view>
+  <view class="price-details card">
+    <view class="price-item flex justify-between mb-16">
+      <text style="font-size: 28rpx;">¥{{room.price}} × {{nightCount}}晚</text>
+      <text class="price" style="font-size: 28rpx;">¥{{totalAmount}}</text>
+    </view>
+    <view class="price-item total flex justify-between pt-16" style="border-top: 1rpx solid #F5F7FA;">
+      <text style="font-size: 30rpx; font-weight: 600;">总计</text>
+      <text class="price price-large">¥{{totalAmount}}</text>
+    </view>
+  </view>
+
+  <!-- 提交按钮 -->
+  <view class="submit-section mt-24" style="width: calc(100% - 32rpx);">
+    <button class="btn btn-block btn-primary" bindtap="submitOrder" style="padding: 24rpx 0; font-size: 32rpx;">提交订单</button>
+  </view>
+
+  <!-- 日期选择弹窗 -->
+  <view class="date-picker-popup" wx:if="{{showDatePicker}}">
+    <view class="popup-mask" bindtap="hideDatePicker"></view>
+    <view class="popup-content">
+      <!-- 弹窗头部 -->
+      <view class="popup-header">
+        <text class="popup-title">选择日期</text>
+        <view class="popup-close" bindtap="hideDatePicker">×</view>
+      </view>
+
+      <!-- 月份切换 -->
+      <view class="month-switcher">
+        <view class="switch-btn {{currentMonthIndex === 0 ? 'disabled' : ''}}" bindtap="switchMonth" data-direction="prev">
+          <text class="arrow">◀</text>
+        </view>
+        <text class="current-month">{{popupCalendarMonth}}</text>
+        <view class="switch-btn {{currentMonthIndex === 1 ? 'disabled' : ''}}" bindtap="switchMonth" data-direction="next">
+          <text class="arrow">▶</text>
+        </view>
+      </view>
+
+      <!-- 星期标题 -->
+      <view class="popup-weekdays">
+        <text class="weekday" wx:for="{{weekDays}}" wx:key="*this">{{item}}</text>
+      </view>
+
+      <!-- 日历网格 -->
+      <scroll-view class="popup-calendar-scroll" scroll-y>
+        <view class="popup-calendar-grid">
+          <view class="popup-calendar-item {{item.isEmpty ? 'empty' : ''}} {{item.status === 'full' ? 'full' : ''}} {{item.isStartDate ? 'start-date' : ''}} {{item.isEndDate ? 'end-date' : ''}} {{item.inRange ? 'in-range' : ''}}" 
+                wx:for="{{popupCalendar}}" 
+                wx:key="date"
+                bindtap="onPopupDateSelect"
+                data-date="{{item.date}}"
+                data-status="{{item.status}}"
+                data-empty="{{item.isEmpty}}">
+            <text class="popup-day" wx:if="{{!item.isEmpty}}">{{item.day}}</text>
+            <text class="popup-holiday" wx:if="{{!item.isEmpty && item.holidayName}}">{{item.holidayName}}</text>
+            <text class="popup-price" wx:if="{{!item.isEmpty && item.status !== 'full'}}">¥{{item.price}}</text>
+            <text class="popup-status" wx:if="{{!item.isEmpty && item.status === 'full'}}">满房</text>
+          </view>
+        </view>
+      </scroll-view>
+
+      <!-- 底部选中信息 -->
+      <view class="popup-footer">
+        <view class="selected-info">
+          <view class="selected-date">
+            <view class="selected-date-row" wx:if="{{tempStartDate}}">
+              <text class="date-text">入住：{{tempStartDate}} {{tempStartWeekDay}} 14:00</text>
+            </view>
+            <view class="selected-date-row" wx:else>
+              <text class="date-text">请选择入住日期</text>
+            </view>
+            <view class="selected-date-row" wx:if="{{tempEndDate}}">
+              <text class="date-text">离店：{{tempEndDate}} {{tempEndWeekDay}} 12:00</text>
+            </view>
+            <view class="selected-date-row" wx:else>
+              <text class="date-text">请选择离店日期</text>
+            </view>
+          </view>
+          <text class="nights-text" wx:if="{{tempStartDate && tempEndDate}}">共{{tempNightCount}}晚</text>
+        </view>
+        <view class="confirm-btn {{!tempStartDate || !tempEndDate ? 'disabled' : ''}}" bindtap="confirmDateSelection">
+          <text wx:if="{{tempStartDate && tempEndDate}}">确认{{tempNightCount}}晚</text>
+          <text wx:else>请选择日期</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

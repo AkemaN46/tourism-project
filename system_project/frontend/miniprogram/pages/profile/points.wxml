@@ -1,0 +1,34 @@
+<view class="container">
+  <!-- 总积分 -->
+  <view class="card points-card">
+    <view class="points-header">
+      <text class="points-label">总积分</text>
+      <text class="points-total">{{totalPoints}}</text>
+    </view>
+    <view class="points-actions">
+      <button class="points-btn exchange-btn" bindtap="exchangePoints">积分兑换</button>
+      <button class="points-btn rules-btn" bindtap="viewRules">积分规则</button>
+    </view>
+  </view>
+
+  <!-- 积分记录 -->
+  <view class="card history-card">
+    <view class="section-header">
+      <text class="section-title">积分记录</text>
+    </view>
+    <view class="history-list">
+      <view class="history-item" wx:for="{{pointsHistory}}" wx:key="id">
+        <view class="history-info">
+          <text class="history-title">{{item.title}}</text>
+          <text class="history-date">{{item.date}}</text>
+        </view>
+        <text class="history-points {{item.type === 'earn' ? 'positive' : 'negative'}}">
+          {{item.points}}
+        </text>
+      </view>
+      <view class="empty-state" wx:if="{{pointsHistory.length === 0}}">
+        <text>暂无积分记录</text>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,57 @@
+- title: "1.用户加入购物车"
+  keyword: add_cart
+  method: POST
+  url: /cart/add
+  json_data:
+    roomId: 1
+    checkInDate: "2026-12-01"
+    checkOutDate: "2026-12-03"
+  expect:
+    code: 200
+
+- title: "2.不存在房型不能加入购物车"
+  keyword: add_cart
+  method: POST
+  url: /cart/add
+  json_data:
+    roomId: 999999
+    checkInDate: "2026-12-01"
+    checkOutDate: "2026-12-03"
+  expect:
+    code: 404
+
+- title: "1.用户修改购物车入住日期"
+  keyword: update_cart
+  method: PUT
+  url: /cart/{id}
+  add_data:
+    roomId: 2
+    checkInDate: "2026-12-04"
+    checkOutDate: "2026-12-06"
+  json_data:
+    checkInDate: "2026-12-05"
+    checkOutDate: "2026-12-07"
+  expect:
+    code: 200
+
+- title: "1.用户删除购物车项"
+  keyword: remove_cart
+  method: POST
+  url: /cart/remove
+  add_data:
+    roomId: 3
+    checkInDate: "2026-12-08"
+    checkOutDate: "2026-12-10"
+  expect:
+    code: 200
+
+- title: "1.用户清空购物车"
+  keyword: clear_cart
+  method: POST
+  url: /cart/clear
+  add_data:
+    roomId: 4
+    checkInDate: "2026-12-11"
+    checkOutDate: "2026-12-13"
+  expect:
+    code: 200

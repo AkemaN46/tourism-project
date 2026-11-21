@@ -1,0 +1,20 @@
+<view class="page">
+  <view class="search">
+    <input placeholder="搜索民宿名称或地址" value="{{keyword}}" bindinput="onInput" bindconfirm="onSearch" confirm-type="search"/>
+    <text bindtap="onSearch">搜索</text>
+  </view>
+  <view class="card" wx:for="{{list}}" wx:key="id" bindtap="open" data-id="{{item.id}}">
+    <image src="{{item.coverImage}}" mode="aspectFill" binderror="onImageError" data-index="{{index}}"/>
+    <view class="body">
+      <text class="name">{{item.name}}</text>
+      <text class="address">{{item.address}}</text>
+      <view><text class="price">¥{{item.minPrice || 0}}起</text><text class="rating">★ {{item.rating || 0}}</text></view>
+    </view>
+  </view>
+  <view class="empty" wx:if="{{loading && list.length === 0}}">正在加载民宿...</view>
+  <view class="error-state" wx:if="{{!loading && loadError}}">
+    <text>{{errorMessage}}</text>
+    <button size="mini" bindtap="retry">重新加载</button>
+  </view>
+  <view class="empty" wx:if="{{!loading && !loadError && list.length === 0}}">暂无已上架民宿</view>
+</view>

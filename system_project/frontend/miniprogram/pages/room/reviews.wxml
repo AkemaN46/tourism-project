@@ -1,0 +1,56 @@
+<!-- pages/room/reviews.wxml -->
+<view class="container">
+  <view class="reviews-header">
+    <text class="header-title">用户评价</text>
+  </view>
+  
+  <scroll-view class="reviews-list" scroll-y>
+    <view class="review-item" wx:for="{{reviews}}" wx:key="id">
+      <view class="review-header">
+        <image src="{{item.avatar || 'https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg'}}" class="user-avatar"></image>
+        <view class="user-info">
+          <view class="user-name-row">
+            <text class="user-name">{{item.username || '匿名用户'}}</text>
+            <view class="user-rating">
+              <text class="star" wx:for="{{[1,2,3,4,5]}}" wx:key="index" style="color: {{index < Math.floor(item.rating || 5) ? '#FFD700' : '#ddd'}};">★</text>
+              <text class="rating-value">{{item.rating || 5}}星</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="review-content">
+        <text>{{item.content || '暂无评价内容'}}</text>
+      </view>
+      <view class="review-images" wx:if="{{item.images && item.images.length > 0}}">
+        <image 
+          src="{{imgItem}}" 
+          class="review-image" 
+          wx:for="{{item.images}}" 
+          wx:for-item="imgItem" 
+          wx:key="index" 
+          mode="aspectFill">
+        </image>
+      </view>
+      <view class="review-time-info">
+        <view class="stay-time" wx:if="{{item.stayTime}}">
+          <text class="time-label">入住：</text>
+          <text class="time-value">{{item.stayTime}}</text>
+        </view>
+        <view class="review-time">
+          <text>{{item.createTime || item.time || '未知时间'}}</text>
+        </view>
+      </view>
+    </view>
+    
+    <!-- 加载更多 -->
+    <view class="loading-more" wx:if="{{loading}}">
+      <text>加载中...</text>
+    </view>
+    <view class="no-more" wx:if="{{!hasMore && reviews.length > 0}}">
+      <text>没有更多评价了</text>
+    </view>
+    <view class="empty-state" wx:if="{{reviews.length === 0 && !loading}}">
+      <text>暂无评价</text>
+    </view>
+  </scroll-view>
+</view>

@@ -1,0 +1,563 @@
+/* list.wxss */
+.container {
+  background-color: #f5f7fa;
+  min-height: 100vh;
+  padding-bottom: 20rpx;
+}
+
+/* 民宿头部信息 */
+.homestay-header {
+  position: relative;
+  height: 300rpx;
+  overflow: hidden;
+}
+
+.homestay-bg {
+  width: 100%;
+  height: 100%;
+}
+
+.homestay-mask {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 30rpx;
+  background: linear-gradient(transparent, rgba(0,0,0,0.7));
+}
+
+.homestay-name {
+  display: block;
+  font-size: 36rpx;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 10rpx;
+}
+
+.homestay-desc {
+  display: block;
+  font-size: 26rpx;
+  color: rgba(255,255,255,0.9);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 本页搜索 + 筛选区域 */
+.search-filter-wrapper {
+  margin: 20rpx 20rpx 0;
+}
+
+.room-search-section {
+  margin-bottom: 16rpx;
+}
+
+.room-search-box {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 50rpx;
+  padding: 10rpx 16rpx;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.04);
+}
+
+.room-search-icon {
+  margin-right: 10rpx;
+  color: #909399;
+  font-size: 26rpx;
+}
+
+.room-search-input {
+  flex: 1;
+  background: transparent;
+  font-size: 26rpx;
+  color: #303133;
+}
+
+.room-search-btn {
+  padding: 6rpx 20rpx;
+  border-radius: 30rpx;
+  background-color: #409EFF;
+  color: #fff;
+  font-size: 24rpx;
+}
+
+.filter-section {
+  padding: 16rpx 20rpx;
+  background-color: #fff;
+  border-radius: 12rpx;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.05);
+}
+
+.filter-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12rpx;
+  background-color: #f8f9fa;
+  border-radius: 50rpx;
+  font-size: 26rpx;
+  color: #606266;
+}
+
+.room-list {
+  height: auto;
+  padding-top: 10rpx;
+}
+
+.room-item {
+  margin: 20rpx;
+  padding: 0;
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 16rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.room-item:active {
+  transform: scale(0.98);
+}
+
+.room-image {
+  width: 100%;
+  height: 320rpx;
+}
+
+.room-content {
+  padding: 24rpx;
+}
+
+.room-homestay {
+  margin-bottom: 12rpx;
+  color: #606266;
+  font-size: 24rpx;
+}
+
+.list-state {
+  padding: 100rpx 30rpx;
+  text-align: center;
+  color: #909399;
+  font-size: 28rpx;
+}
+
+.retry-state {
+  color: #409eff;
+}
+
+.room-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12rpx;
+}
+
+.room-name {
+  font-size: 34rpx;
+  font-weight: 600;
+  color: #303133;
+}
+
+.room-price {
+  color: #FF6B35;
+  font-size: 32rpx;
+  font-weight: 600;
+}
+
+.room-price::before {
+  content: '¥';
+  font-size: 26rpx;
+  margin-right: 4rpx;
+}
+
+/* 评分和销量样式 */
+.room-stats {
+  display: flex;
+  align-items: center;
+  gap: 12rpx;
+  margin: 12rpx 0;
+}
+
+.rating-tag {
+  display: flex;
+  align-items: center;
+  background-color: #fff9e6;
+  padding: 4rpx 12rpx;
+  border-radius: 20rpx;
+  border: 1rpx solid #ffd700;
+}
+
+.star-icon {
+  color: #FFD700;
+  font-size: 20rpx;
+  margin-right: 4rpx;
+}
+
+.rating-value {
+  font-size: 22rpx;
+  font-weight: 600;
+  color: #333;
+}
+
+.sales-tag {
+  background-color: #f0f9ff;
+  padding: 4rpx 12rpx;
+  border-radius: 20rpx;
+  border: 1rpx solid #409eff;
+}
+
+.sales-text {
+  font-size: 22rpx;
+  color: #409eff;
+  font-weight: 500;
+}
+
+.room-desc {
+  color: #909399;
+  font-size: 26rpx;
+  margin-bottom: 16rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.room-tags {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tag {
+  background-color: #f0f9ff;
+  color: #409eff;
+  font-size: 22rpx;
+  padding: 8rpx 16rpx;
+  border-radius: 30rpx;
+  margin-right: 12rpx;
+  margin-bottom: 8rpx;
+  border: 1rpx solid #b3d8ff;
+}
+
+.tag-active {
+  background-color: #409eff;
+  color: white;
+  border-color: #409eff;
+}
+
+/* 操作按钮 */
+.room-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20rpx;
+  padding-top: 20rpx;
+  border-top: 1rpx solid #f0f0f0;
+}
+
+.action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12rpx 20rpx;
+  border-radius: 30rpx;
+  font-size: 24rpx;
+}
+
+.action-icon {
+  margin-right: 6rpx;
+  font-size: 28rpx;
+}
+
+.action-text {
+  font-size: 24rpx;
+}
+
+.favorite-btn {
+  background-color: #fff0f0;
+  color: #f56c6c;
+}
+
+.cart-btn {
+  background-color: #f0f9ff;
+  color: #409eff;
+}
+
+.book-btn {
+  background: linear-gradient(135deg, #FF6B35 0%, #ff8c5a 100%);
+  color: white;
+  padding: 16rpx 30rpx;
+  font-weight: 500;
+}
+
+/* 弹窗样式 */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.popup-content {
+  width: 100%;
+  background: linear-gradient(to bottom, #ffffff, #f8f9fa);
+  border-top-left-radius: 28rpx;
+  border-top-right-radius: 28rpx;
+  padding: 0 28rpx 28rpx;
+  max-height: 80%;
+  overflow: hidden;
+  box-shadow: 0 -6rpx 24rpx rgba(0, 0, 0, 0.12);
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from { 
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to { 
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28rpx 0 20rpx;
+  border-bottom: 1rpx solid #f0f2f5;
+}
+
+.popup-title {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.close-icon {
+  padding: 16rpx;
+  border-radius: 50%;
+  background-color: #f5f7fa;
+  transition: all 0.2s ease;
+}
+
+.close-icon:active {
+  background-color: #e4e7ed;
+  transform: scale(0.9);
+}
+
+.filter-options {
+  max-height: 500rpx;
+  padding: 20rpx 0;
+}
+
+.filter-group {
+  margin-bottom: 32rpx;
+  padding: 20rpx;
+  background: white;
+  border-radius: 16rpx;
+  box-shadow: 0 2rpx 12rpx rgba(0, 0, 0, 0.02);
+}
+
+.filter-label {
+  margin-bottom: 24rpx;
+}
+
+.label-text {
+  display: block;
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 6rpx;
+}
+
+.label-desc {
+  display: block;
+  font-size: 24rpx;
+  color: #909399;
+}
+
+.filter-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16rpx;
+}
+
+.price-tags {
+  margin-top: 24rpx;
+  padding-top: 24rpx;
+  border-top: 1rpx dashed #e4e7ed;
+}
+
+.tag {
+  padding: 12rpx 20rpx;
+  background-color: #f8f9fa;
+  color: #606266;
+  font-size: 24rpx;
+  border-radius: 24rpx;
+  transition: all 0.2s ease;
+  border: 2rpx solid transparent;
+}
+
+.tag:active {
+  transform: scale(0.95);
+}
+
+.tag-active {
+  background: linear-gradient(135deg, #409EFF, #66b1ff);
+  color: white;
+  border-color: #409EFF;
+  box-shadow: 0 3rpx 10rpx rgba(64, 158, 255, 0.3);
+}
+
+/* 价格滑动条样式 */
+.price-slider-container {
+  margin: 20rpx 0;
+  padding: 20rpx;
+  background: linear-gradient(135deg, #f8f9ff, #ffffff);
+  border-radius: 16rpx;
+  border: 1rpx solid #e3f2fd;
+}
+
+.price-display {
+  text-align: center;
+  margin-bottom: 20rpx;
+}
+
+.price-text {
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #409EFF;
+}
+
+.price-slider {
+  margin: 0 10rpx;
+}
+
+/* 价格输入框样式 */
+.price-input-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20rpx 0;
+  padding: 20rpx;
+  background: #fafbff;
+  border-radius: 12rpx;
+  border: 1rpx solid #e4e7ed;
+}
+
+.price-input-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-label {
+  font-size: 24rpx;
+  color: #909399;
+  margin-bottom: 12rpx;
+}
+
+.price-input {
+  width: 120rpx;
+  height: 52rpx;
+  padding: 0 12rpx;
+  text-align: center;
+  font-size: 26rpx;
+  font-weight: 500;
+  color: #303133;
+  border: 2rpx solid #e4e7ed;
+  border-radius: 10rpx;
+  background-color: white;
+  transition: all 0.2s ease;
+}
+
+.price-input:focus {
+  border-color: #FF6B35;
+  box-shadow: 0 0 0 4rpx rgba(255, 107, 53, 0.1);
+}
+
+.price-separator {
+  font-size: 28rpx;
+  color: #909399;
+  margin: 0 20rpx;
+  font-weight: 500;
+}
+
+/* 底部按钮样式 */
+.popup-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20rpx;
+  padding-top: 24rpx;
+  border-top: 1rpx solid #f0f2f5;
+}
+
+.reset-btn, .confirm-btn {
+  flex: 1;
+  height: 76rpx;
+  border-radius: 38rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28rpx;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  box-shadow: 0 3rpx 10rpx rgba(0, 0, 0, 0.06);
+}
+
+.reset-btn {
+  background-color: #f8f9fa;
+  color: #909399;
+  border: 2rpx solid #e4e7ed;
+}
+
+.reset-btn:active {
+  background-color: #e4e7ed;
+  transform: translateY(2rpx);
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.1);
+}
+
+.confirm-btn {
+  background: linear-gradient(135deg, #409EFF, #66b1ff);
+  color: white;
+  border: none;
+  box-shadow: 0 4rpx 14rpx rgba(64, 158, 255, 0.3);
+}
+
+.confirm-btn:active {
+  transform: translateY(2rpx);
+  box-shadow: 0 4rpx 12rpx rgba(255, 107, 53, 0.4);
+}
+
+/* 滚动条美化 */
+::-webkit-scrollbar {
+  width: 8rpx;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4rpx;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4rpx;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}

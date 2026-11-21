@@ -1,0 +1,242 @@
+<scroll-view class="container" 
+      bindscroll="onScroll" 
+      bindscrolltolower="onReachBottom" 
+      scroll-y="true" 
+      scroll-top="{{scrollTop}}" 
+      scroll-into-view="{{scrollIntoView}}"
+      scroll-with-animation="true" 
+      enable-back-to-top="true"> <!--滚动动画 -->
+  <!-- 轮播图 -->
+  <swiper class="room-swiper" indicator-dots autoplay interval="5000" duration="1000" style="width: 100%; height: 450rpx;">
+    <swiper-item wx:for="{{room.gallery || []}}" wx:key="index">
+      <image src="{{item || 'https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg'}}" class="swiper-image" mode="aspectFill" style="width: 100%; height: 100%;"></image>
+    </swiper-item>
+  </swiper>
+
+  <!-- 房型基本信息 -->
+  <view class="room-basic card">
+    <view class="room-header">
+      <view class="room-title">
+        <text class="room-name">{{room.name || '未知房型'}}</text>
+        <view class="room-tags">
+          <text class="tag" wx:if="{{room.bedType}}">{{room.bedType}}</text>
+          <text class="tag" wx:if="{{room.peopleNum}}">可住{{room.peopleNum}}人</text>
+          <text class="tag" wx:if="{{room.area}}">{{room.area}}㎡</text>
+        </view>
+        <!-- 添加评分和销量信息 -->
+        <view class="room-stats" wx:if="{{homestayInfo.rating || homestayInfo.salesCount}}">
+          <view class="rating-tag" wx:if="{{homestayInfo.rating && homestayInfo.rating > 0}}">
+            <text class="star-icon">★</text>
+            <text class="rating-value">{{homestayInfo.rating}}</text>
+            <text class="rating-desc" wx:if="{{homestayInfo.rating >= 4.8}}">超棒</text>
+            <text class="rating-desc" wx:if="{{homestayInfo.rating >= 4.5 && homestayInfo.rating < 4.8}}">很棒</text>
+            <text class="rating-desc" wx:if="{{homestayInfo.rating >= 4.0 && homestayInfo.rating < 4.5}}">不错</text>
+            <text class="rating-desc" wx:if="{{homestayInfo.rating < 4.0}}">一般</text>
+          </view>
+          <view class="sales-tag" wx:if="{{homestayInfo.salesCount && homestayInfo.salesCount > 0}}">
+            <text class="sales-count">{{homestayInfo.salesCount}}+ 销量</text>
+          </view>
+        </view>
+      </view>
+      <view class="room-price-box">
+        <view class="price-wrapper">
+          <text class="price-label">现价</text>
+          <text class="price">¥{{room.price || 0}}</text>
+        </view>
+        <view class="original-price-wrapper" wx:if="{{room.originalPrice && room.originalPrice > room.price}}">
+          <text class="original-label">原价</text>
+          <text class="original-price">¥{{room.originalPrice}}</text>
+          <text class="discount-tag" wx:if="{{discountPercent}}">{{discountPercent}}折</text>
+        </view>
+      </view>
+    </view>
+    
+    <!--房亮点 -->
+    <view class="room-highlights" wx:if="{{room.highlights && room.highlights.length > 0}}">
+      <view class="highlight-item" wx:for="{{room.highlights}}" wx:key="index">
+        <text class="highlight-icon">✓</text>
+        <text class="highlight-text">{{item}}</text>
+      </view>
+    </view>
+  </view>
+  
+  <!-- 固定标签导航 - 用作锚点导航 -->
+  <view class="tab-navigation-sticky">
+    <view class="tab-nav">
+      <view class="tab-item {{activeTab === 0 ? 'active' : ''}}" bindtap="scrollToSection" data-section="section-facilities" data-index="0">
+        <text class="tab-icon">🏠</text>
+        <text class="tab-text">设施</text>
+      </view>
+      <view class="tab-item {{activeTab === 1 ? 'active' : ''}}" bindtap="scrollToSection" data-section="section-intro" data-index="1">
+        <text class="tab-icon">📝</text>
+        <text class="tab-text">介绍</text>
+      </view>
+      <view class="tab-item {{activeTab === 2 ? 'active' : ''}}" bindtap="scrollToSection" data-section="section-booking" data-index="2">
+        <text class="tab-icon">📅</text>
+        <text class="tab-text">预订</text>
+      </view>
+      <view class="tab-item {{activeTab === 3 ? 'active' : ''}}" bindtap="scrollToSection" data-section="section-review" data-index="3">
+        <text class="tab-icon">💬</text>
+        <text class="tab-text">评价({{reviews.length}})</text>
+      </view>
+      <view class="tab-item {{activeTab === 4 ? 'active' : ''}}" bindtap="scrollToSection" data-section="section-surrounding" data-index="4">
+        <text class="tab-icon">📍</text>
+        <text class="tab-text">周边</text>
+      </view>
+      <view class="tab-indicator" style="left: {{indicatorPosition + '%'}};"></view>
+    </view>
+  </view>
+  
+  <!-- 连续滚动的内容区域 -->
+  <view class="continuous-content">
+    <!-- 设施内容 -->
+    <view id="section-facilities" class="content-section">
+      <view class="section-header">
+        <text class="section-title">🏠 设施服务</text>
+      </view>
+      <view class="facilities-grid">
+        <view class="facility-item {{item.available ? 'available' : 'unavailable'}}" wx:for="{{facilities}}" wx:key="name">
+          <text class="facility-icon">{{item.icon}}</text>
+          <text class="facility-name">{{item.name}}</text>
+        </view>
+      </view>
+    </view>
+    
+    <!-- 介绍内容 -->
+    <view id="section-intro" class="content-section">
+      <view class="section-header">
+        <text class="section-title">📝 房型介绍</text>
+      </view>
+      <view class="description-content">
+        <text>{{room.description || '暂无房型介绍'}}</text>
+      </view>
+    </view>
+    
+    <!-- 预订内容 -->
+    <view id="section-booking" class="content-section">
+      <view class="section-header">
+        <text class="section-title">📅 预订说明</text>
+      </view>
+      <view class="booking-tips">
+        <view class="tip-item">
+          <text class="tip-icon">✓</text>
+          <text class="tip-text">点击"立即预订"选择入住日期</text>
+        </view>
+        <view class="tip-item">
+          <text class="tip-icon">✓</text>
+          <text class="tip-text">可查看实时房态，满房日期不可选</text>
+        </view>
+        <view class="tip-item">
+          <text class="tip-icon">✓</text>
+          <text class="tip-text">支持在线支付，预订后立即确认</text>
+        </view>
+      </view>
+    </view>
+    
+    <!-- 评价内容 -->
+    <view id="section-review" class="content-section">
+      <view class="section-header">
+        <text class="section-title">💬 用户评价</text>
+      </view>
+      <view class="reviews-section">
+        <view class="review-item" wx:for="{{reviews || []}}" wx:key="id">
+          <view class="review-header">
+            <image src="{{item.avatar || 'https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg'}}" class="user-avatar"></image>
+            <view class="user-info">
+              <view class="user-name-row">
+                <text class="user-name">{{item.username || '匿名用户'}}</text>
+                <view class="user-rating">
+                  <text class="star" wx:for="{{item.starRating}}" wx:for-item="isFilled" wx:key="index" style="color: {{isFilled ? '#FFD700' : '#ddd'}};">★</text>
+                  <text class="rating-value">{{item.rating || 5}}星</text>
+                </view>
+              </view>
+            </view>
+          </view>
+          <view class="review-content">
+            <text>{{item.content || '暂无评价内容'}}</text>
+          </view>
+          <view class="review-images" wx:if="{{item.images && item.images.length > 0}}">
+            <image 
+              src="{{imgItem}}" 
+              class="review-image" 
+              wx:for="{{item.images}}" 
+              wx:for-item="imgItem" 
+              wx:key="index" 
+              mode="aspectFill">
+            </image>
+          </view>
+          <view class="review-time-info">
+            <view class="stay-time" wx:if="{{item.stayTime}}">
+              <text class="time-label">入住：</text>
+              <text class="time-value">{{item.stayTime}}</text>
+            </view>
+            <view class="review-time">
+              <text>{{item.createTime || item.time || '未知时间'}}</text>
+            </view>
+          </view>
+        </view>
+        <view class="empty-reviews" wx:if="{{reviews.length === 0}}">
+          <text>暂无评价</text>
+        </view>
+      </view>
+    </view>
+    
+    <!-- 周边内容 -->
+    <view id="section-surrounding" class="content-section">
+      <view class="section-header">
+        <text class="section-title">📍 周边信息</text>
+      </view>
+      <view class="surrounding-content">
+        <view class="surrounding-item">
+          <text class="surrounding-icon">🍽️</text>
+          <view class="surrounding-info">
+            <text class="surrounding-title">周边美食</text>
+            <text class="surrounding-desc">附近有多家特色餐厅和小吃店</text>
+          </view>
+        </view>
+        <view class="surrounding-item">
+          <text class="surrounding-icon">🚇</text>
+          <view class="surrounding-info">
+            <text class="surrounding-title">交通便利</text>
+            <text class="surrounding-desc">地铁站步行5分钟，公交线路丰富</text>
+          </view>
+        </view>
+        <view class="surrounding-item">
+          <text class="surrounding-icon">🛍️</text>
+          <view class="surrounding-info">
+            <text class="surrounding-title">购物场所</text>
+            <text class="surrounding-desc">附近有大型商场和便利店</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+
+<!-- 底部占位，防止内容被底部栏遮挡 -->
+<view style="height: 120rpx;"></view>
+
+<!-- 返回顶部按钮 -->
+<view class="back-to-top" wx:if="{{scrollTop > 300}}" bindtap="scrollToTop">
+  <text class="back-to-top-icon">↑</text>
+</view>
+
+<!-- 底部操作栏 -->
+<view class="bottom-bar">
+  <view class="action-left">
+    <view class="action-item" bindtap="toggleFavorite">
+      <text class="action-icon">{{isFavorite ? '❤️' : '🤍'}}</text>
+      <text class="action-text">{{isFavorite ? '已收藏' : '收藏'}}</text>
+    </view>
+    <view class="action-item" bindtap="addToCart">
+      <text class="action-icon">🛒</text>
+      <text class="action-text">加入购物车</text>
+    </view>
+  </view>
+  <view class="action-right">
+    <view class="book-btn {{room.stock <= 0 ? 'disabled' : ''}}" bindtap="goToBooking">
+      <text class="btn-price">¥{{room.price || 0}}</text>
+      <text class="btn-text">立即预订</text>
+    </view>
+  </view>
+</view>

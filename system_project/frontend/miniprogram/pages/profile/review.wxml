@@ -1,0 +1,62 @@
+<view class="container">
+  <!-- 标签栏 -->
+  <view class="tabs">
+    <view class="tab-item {{activeTab === 'all' ? 'active' : ''}}" bindtap="switchTab" data-tab="all">
+      全部
+    </view>
+    <view class="tab-item {{activeTab === 'pending' ? 'active' : ''}}" bindtap="switchTab" data-tab="pending">
+      待审核
+    </view>
+    <view class="tab-item {{activeTab === 'approved' ? 'active' : ''}}" bindtap="switchTab" data-tab="approved">
+      已通过
+    </view>
+    <view class="tab-item {{activeTab === 'rejected' ? 'active' : ''}}" bindtap="switchTab" data-tab="rejected">
+      未通过
+    </view>
+  </view>
+
+  <!-- 评价列表 -->
+  <scroll-view class="review-list" scroll-y>
+    <view class="review-item card" wx:for="{{reviewList}}" wx:key="id">
+      <view class="review-header">
+        <view class="room-info">
+          <text class="room-name">{{item.roomName}}</text>
+          <view class="rating">
+            <block wx:for="{{[1, 2, 3, 4, 5]}}" wx:key="index">
+              <text class="star {{item.rating >= index + 1 ? 'active' : ''}}">★</text>
+            </block>
+            <text class="rating-value">{{item.rating}}分</text>
+          </view>
+        </view>
+        <view class="review-status {{getStatusClass(item.status)}}">
+          {{getStatusText(item.status)}}
+        </view>
+      </view>
+
+      <view class="review-content">
+        <text>{{item.content}}</text>
+      </view>
+
+      <!-- 评价图片 -->
+      <view class="review-images" wx:if="{{item.images && item.images.length > 0}}">
+        <view class="image-item" wx:for="{{item.images}}" wx:key="index">
+          <image src="{{item}}" mode="aspectFill" bindtap="previewImage" data-url="{{item}}"></image>
+        </view>
+      </view>
+
+      <view class="review-footer">
+        <text class="review-time">{{item.createdAt}}</text>
+        <view class="review-actions">
+          <button class="action-btn" bindtap="editReview" data-id="{{item.id}}" wx:if="{{item.status === 2}}">编辑</button>
+          <button class="action-btn danger" bindtap="deleteReview" data-id="{{item.id}}">删除</button>
+        </view>
+      </view>
+    </view>
+
+    <!-- 空状态 -->
+    <view class="empty-state" wx:if="{{reviewList.length === 0 && !loading}}">
+      <image src="/assets/icons/empty.png" class="empty-icon"></image>
+      <text class="empty-text">暂无评价</text>
+    </view>
+  </scroll-view>
+</view>

@@ -1,0 +1,76 @@
+{
+  "pages": [
+    "pages/login/index", 
+    "pages/index/index",
+    "pages/homestay/list",
+    "pages/homestay/detail",
+    "pages/search/results",
+    "pages/room/list",
+    "pages/room/detail",
+    "pages/room/reviews",
+    "pages/order/list",
+    "pages/order/detail",
+    "pages/order/create",
+    "pages/order/batch-create",
+    "pages/order/review",
+    "pages/profile/index",
+    "pages/profile/favorite",
+    "pages/profile/cart",
+    "pages/profile/info",
+    "pages/profile/review",
+    "pages/profile/address",  
+    "pages/profile/setting",
+    "pages/profile/wallet",
+    "pages/profile/coupons",
+    "pages/profile/points",
+    "pages/profile/account-security",
+    "pages/profile/edit-review",
+    "pages/profile/feedback",
+    "pages/profile/service"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "汐岸小筑",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#409EFF",
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "assets/icons/home.png",
+        "selectedIconPath": "assets/icons/home-active.png"
+      },
+      {
+        "pagePath": "pages/homestay/list",
+        "text": "民宿",
+        "iconPath": "assets/icons/room.png",
+        "selectedIconPath": "assets/icons/room-active.png"
+      },
+      {
+        "pagePath": "pages/profile/cart",
+        "text": "购物车",
+        "iconPath": "assets/icons/cart.png",
+        "selectedIconPath": "assets/icons/cart.png"
+      },
+      {
+        "pagePath": "pages/profile/index",
+        "text": "我的",
+        "iconPath": "assets/icons/profile.png",
+        "selectedIconPath": "assets/icons/profile-active.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

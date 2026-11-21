@@ -1,0 +1,144 @@
+- title: "1.管理员创建房型"
+  keyword: create_room
+  method: POST
+  url: /room/create
+  homestay_data:
+    name: "房型自动化测试民宿"
+    phone: "029-12345678"
+    address: "西安市碑林区房型自动化测试路100号"
+    description: "房型创建前置民宿"
+    coverImage: "/images/api-auto-room-homestay.jpg"
+    status: 1
+  room_data:
+    roomTypeId: 1
+    name: "自动化测试大床房"
+    description: "接口自动化创建的房型"
+    price: 299.00
+    originalPrice: 399.00
+    area: 30
+    bedType: "1.8米大床"
+    peopleNum: 2
+    stock: 5
+    status: 1
+    coverImage: "/images/api-auto-room.jpg"
+    gallery: "[]"
+  expect:
+    code: 200
+
+- title: "2.房型价格为零创建失败"
+  keyword: create_room
+  method: POST
+  url: /room/create
+  homestay_data:
+    name: "异常房型自动化民宿"
+    phone: "029-12345678"
+    address: "西安市碑林区房型自动化测试路101号"
+    description: "异常房型前置民宿"
+    coverImage: "/images/api-auto-room-homestay.jpg"
+    status: 1
+  room_data:
+    roomTypeId: 1
+    name: "异常自动化房型"
+    price: 0
+    originalPrice: 99
+    stock: 1
+    status: 1
+  expect:
+    code: 400
+
+- title: "1.管理员修改房型"
+  keyword: update_room
+  method: PUT
+  url: /room/update/{id}
+  create_data:
+    homestay_data:
+      name: "待修改房型测试民宿"
+      phone: "029-12345678"
+      address: "西安市碑林区房型自动化测试路102号"
+      description: "修改房型前置民宿"
+      coverImage: "/images/api-auto-room-homestay.jpg"
+      status: 1
+    room_data:
+      roomTypeId: 1
+      name: "待修改自动化房型"
+      description: "修改房型前置数据"
+      price: 299.00
+      originalPrice: 399.00
+      area: 30
+      bedType: "1.8米大床"
+      peopleNum: 2
+      stock: 5
+      status: 1
+      coverImage: "/images/api-auto-room.jpg"
+      gallery: "[]"
+  json_data:
+    roomTypeId: 1
+    name: "自动化测试大床房已更新"
+    description: "接口自动化更新的房型"
+    price: 319.00
+    originalPrice: 399.00
+    area: 32
+    bedType: "1.8米大床"
+    peopleNum: 2
+    stock: 6
+    status: 1
+    coverImage: "/images/api-auto-room-update.jpg"
+    gallery: "[]"
+  expect:
+    code: 200
+
+- title: "1.管理员下架后恢复上架房型"
+  keyword: toggle_room
+  method: PUT
+  url: /room/toggleStatus/{id}
+  create_data:
+    homestay_data:
+      name: "待上下架房型测试民宿"
+      phone: "029-12345678"
+      address: "西安市碑林区房型自动化测试路103号"
+      description: "上下架房型前置民宿"
+      coverImage: "/images/api-auto-room-homestay.jpg"
+      status: 1
+    room_data:
+      roomTypeId: 1
+      name: "待上下架自动化房型"
+      description: "上下架房型前置数据"
+      price: 299.00
+      originalPrice: 399.00
+      area: 30
+      bedType: "1.8米大床"
+      peopleNum: 2
+      stock: 5
+      status: 1
+      coverImage: "/images/api-auto-room.jpg"
+      gallery: "[]"
+  expect:
+    code: 200
+
+- title: "1.管理员删除房型"
+  keyword: delete_room
+  method: DELETE
+  url: /room/delete/{id}
+  create_data:
+    homestay_data:
+      name: "待删除房型测试民宿"
+      phone: "029-12345678"
+      address: "西安市碑林区房型自动化测试路104号"
+      description: "删除房型前置民宿"
+      coverImage: "/images/api-auto-room-delete-homestay.jpg"
+      status: 1
+    room_data:
+      roomTypeId: 1
+      name: "待删除自动化房型"
+      description: "删除房型前置数据"
+      price: 299.00
+      originalPrice: 399.00
+      area: 30
+      bedType: "1.8米大床"
+      peopleNum: 2
+      stock: 5
+      status: 1
+      coverImage: "/images/api-auto-room-delete.jpg"
+      gallery: "[]"
+  expect:
+    code: 200

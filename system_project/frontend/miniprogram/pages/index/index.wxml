@@ -1,0 +1,73 @@
+<view class="container">
+  <!-- 轮播图 -->
+  <swiper class="banner-swiper" indicator-dots="true" autoplay="true" interval="3000" duration="500">
+    <swiper-item wx:for="{{banners}}" wx:key="id">
+      <image class="banner-image" src="{{item.imageUrl}}" mode="aspectFill" bindtap="goToDetail" data-id="{{item.id}}"/>
+    </swiper-item>
+  </swiper>
+
+  <!-- 搜索区域 -->
+  <view class="search-section">
+    <view class="search-box">
+      <text class="search-icon">🔍</text>
+      <input
+        class="search-input"
+        placeholder="搜索民宿名称/地点"
+        value="{{searchKeyword}}"
+        bindinput="onSearchInput"
+        bindconfirm="onSearchConfirm"
+        confirm-type="search"
+      />
+      <text class="search-btn" bindtap="goToSearch">搜索</text>
+    </view>
+  </view>
+
+  <!-- 为你推荐（个性化房源） -->
+  <view class="section-title" wx:if="{{recommendedRooms && recommendedRooms.length}}">
+    <text class="title-text">为你推荐</text>
+    <text class="more-text" bindtap="goToAllRooms">查看更多 ></text>
+  </view>
+  <view class="homestay-grid" wx:if="{{recommendedRooms && recommendedRooms.length}}">
+    <view class="homestay-item" wx:for="{{recommendedRooms}}" wx:key="id" bindtap="goToRecommendedRoomDetail" data-id="{{item.id}}">
+      <image class="homestay-image" src="{{item.coverImage}}" mode="aspectFill"/>
+      <view class="homestay-info">
+        <text class="homestay-name">
+          {{item.name}}
+        </text>
+        <text class="homestay-subtitle">{{item.homestayName}}</text>
+        <text class="homestay-price">¥{{item.price || 0}}/晚</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 推荐民宿 -->
+  <view class="section-title">
+    <text class="title-text">推荐民宿</text>
+    <text class="more-text" bindtap="goToHomestayList">查看更多 ></text>
+  </view>
+  <view class="homestay-grid">
+    <view class="homestay-item" wx:for="{{rooms}}" wx:key="id" bindtap="goToHomestayDetail" data-id="{{item.id}}">
+      <image class="homestay-image" src="{{item.coverImage}}" mode="aspectFill"/>
+      <view class="homestay-info">
+        <text class="homestay-name">{{item.name}}</text>
+        <text class="homestay-price">¥{{item.minPrice || item.price || 0}}起</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 授权登录弹窗 -->
+  <modal 
+    title="欢迎使用汐岸小筑" 
+    hidden="{{!showAuthModal}}" 
+    confirm-text="授权登录" 
+    cancel-text="暂不登录"
+    bindconfirm="handleAuth"
+    bindcancel="closeAuthModal"
+  >
+    <view class="auth-modal-content">
+      <image src="/assets/icons/avatar.png" class="auth-avatar"></image>
+      <text class="auth-text">授权登录后可享受完整预订服务</text>
+      <text class="auth-desc">不授权也可浏览民宿，仅预订功能受限</text>
+    </view>
+  </modal>
+</view>

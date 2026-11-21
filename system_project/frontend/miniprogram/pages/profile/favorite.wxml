@@ -1,0 +1,32 @@
+<view class="container">
+  <!-- 收藏列表 -->
+  <scroll-view class="favorite-list" scroll-y>
+    <view class="room-item card" wx:for="{{favoriteList}}" wx:key="id">
+      <image src="{{item.coverImage}}" class="room-image" mode="aspectFill" binderror="onRoomImageError" data-index="{{index}}"></image>
+      <view class="room-content">
+        <view class="room-header">
+          <text class="room-name">{{item.roomName}}</text>
+          <text class="room-price">¥{{item.price}}</text>
+        </view>
+        <view class="room-info">
+          <text class="room-desc">{{item.description}}</text>
+        </view>
+      </view>
+      <view class="room-actions">
+        <button class="action-btn" bindtap="removeFavorite" data-id="{{item.roomId}}">取消收藏</button>
+        <button class="action-btn primary" bindtap="goToBooking" data-id="{{item.roomId}}">立即预订</button>
+      </view>
+    </view>
+    
+    <!-- 加载状态 -->
+    <view class="loading" wx:if="{{loading}}">
+      <text>加载中...</text>
+    </view>
+    
+    <!-- 空状态 -->
+    <view class="empty-state" wx:if="{{favoriteList.length === 0 && !loading}}">
+      <image src="/assets/icons/empty.png" class="empty-icon"></image>
+      <text class="empty-text">暂无收藏</text>
+    </view>
+  </scroll-view>
+</view>

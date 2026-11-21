@@ -1,0 +1,55 @@
+<view class="container">
+  <!-- 购物车列表 -->
+  <scroll-view class="cart-list" scroll-y style="flex: 1; width: 100%;">
+    <view class="cart-item card" wx:for="{{cartList}}" wx:key="id">
+      <!-- 点击整个头部区域来选择/取消选择 -->
+      <view class="item-header" style="display: flex; align-items: center;" bindtap="toggleItem" data-id="{{item.id}}">
+        <checkbox checked="{{item.selected}}"></checkbox>
+        <image src="{{item.coverImage}}" class="room-image" mode="aspectFill" binderror="onRoomImageError" data-index="{{index}}" style="width: 100rpx; height: 100rpx; border-radius: 10rpx; margin-left: 20rpx;"></image>
+        <view class="room-info" style="margin-left: 20rpx; flex: 1;">
+          <text class="room-name" style="font-size: 28rpx; color: #333;">{{item.roomName}}</text>
+          <text class="room-price" style="font-size: 26rpx; color: #F56C6C; margin-top: 10rpx; display: block;">¥{{item.price}}/晚</text>
+        </view>
+      </view>
+      <view class="item-content" style="display: flex; justify-content: space-between; align-items: center; margin-top: 20rpx; padding-left: 140rpx;">
+        <view class="stay-time" style="font-size: 24rpx; color: #999;">
+          <picker mode="date" value="{{item.checkInDate}}" start="{{today}}" end="{{maxDate}}" bindchange="onCheckInChange" data-index="{{index}}">
+            <text>{{item.checkInDate}}</text>
+          </picker>
+          <text> 至 </text>
+          <picker mode="date" value="{{item.checkOutDate}}" start="{{today}}" end="{{maxDate}}" bindchange="onCheckOutChange" data-index="{{index}}">
+            <text>{{item.checkOutDate}} ({{item.nights}}晚)</text>
+          </picker>
+        </view>
+        <view class="item-actions">
+          <button class="action-btn" bindtap="removeFromCart" data-id="{{item.id}}" style="background-color: #f5f5f5; color: #999; border: none; border-radius: 5rpx; padding: 10rpx 20rpx; font-size: 24rpx;">删除</button>
+        </view>
+      </view>
+    </view>
+    
+    <!-- 加载状态 -->
+    <view class="loading" wx:if="{{loading}}">
+      <text>加载中...</text>
+    </view>
+    
+    <!-- 空状态 -->
+    <view class="empty-state" wx:if="{{cartList.length === 0 && !loading}}">
+      <image src="/assets/icons/empty.png" class="empty-icon"></image>
+      <text class="empty-text">购物车为空</text>
+    </view>
+  </scroll-view>
+
+  <!-- 底部结算栏 -->
+  <view class="checkout-bar" wx:if="{{cartList.length > 0}}" style="display: flex; align-items: center; padding: 20rpx; background-color: white; border-top: 1rpx solid #f5f5f5; width: 100%; box-sizing: border-box;">
+    <!-- 点击整个区域来切换全选状态 -->
+    <view class="select-all" style="display: flex; align-items: center;" bindtap="toggleSelectAll">
+      <checkbox checked="{{selectAll}}"></checkbox>
+      <text class="ml-10">全选</text>
+    </view>
+    <view class="total-info" style="flex: 1; text-align: right; margin-right: 20rpx;">
+      <text class="total-text">合计: </text>
+      <text class="total-price" style="font-size: 32rpx; color: #F56C6C; font-weight: bold;">¥{{totalAmount}}</text>
+    </view>
+    <button class="checkout-btn" bindtap="checkout" style="background-color: #409EFF; color: white; border: none; border-radius: 10rpx; padding: 15rpx 30rpx; font-size: 28rpx;">去结算</button>
+  </view>
+</view>

@@ -1,0 +1,818 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1789703031680,128,获取管理员 token,200,,获取管理员 token-前置操作 2-1,text,true,,669,249,1,2,http://localhost:8082/api/admin/login,125,0,19
+1789703031680,415,获取token,200,,获取token-前置操作 1-1,text,false,"HTTP=200, JSON code=500",495,251,1,2,http://localhost:8082/user/wxlogin,415,0,19
+1789703032725,3,订单更新,401,,订单更新 7-1,text,false,"HTTP=401, JSON code=401",490,213,1,1,http://localhost:8082/order/126/status,3,0,1
+1789703035706,2,订单更新,401,,订单更新 7-2,text,false,"HTTP=401, JSON code=401",490,213,1,1,http://localhost:8082/order/127/status,2,0,0
+1789703038705,3,订单更新,401,,订单更新 7-3,text,false,"HTTP=401, JSON code=401",490,213,1,1,http://localhost:8082/order/128/status,3,0,1
+1789703041707,2,订单更新,401,,订单更新 7-4,text,false,"HTTP=401, JSON code=401",490,213,1,1,http://localhost:8082/order/129/status,2,0,0
+1789703044707,3,订单更新,401,,订单更新 7-5,text,false,"HTTP=401, JSON code=401",490,213,1,1,http://localhost:8082/order/130/status,3,0,1
+1789703047707,2,订单更新,401,,订单更新 7-6,text,false,"HTTP=401, JSON code=401",490,213,1,1,http://localhost:8082/order/131/status,2,0,0
+1789703050707,2,订单更新,401,,订单更新 7-7,text,false,"HTTP=401, JSON code=401",490,213,1,1,http://localhost:8082/order/132/status,2,0,0
+1789703053705,3,订单更新,401,,订单更新 7-8,text,false,"HTTP=401, JSON code=401",490,213,1,1,http://localhost:8082/order/133/status,3,0,1
+1789703056705,3,订单更新,401,,订单更新 7-9,text,false,"HTTP=401, JSON code=401",490,213,1,1,http://localhost:8082/order/134/status,3,0,1
+1789703059707,2,订单更新,401,,订单更新 7-10,text,false,"HTTP=401, JSON code=401",490,213,1,1,http://localhost:8082/order/135/status,2,0,1
+1789703062518,17,房源浏览,200,,房源浏览 1-1,text,true,,3616,193,1,3,http://localhost:8082/room/list?homestayId=1&page=1&size=10&bedType=&keyword=&status=1&priceRange=,17,0,1
+1789703062537,10,日期可订性,200,,日期可订性 3-1,text,true,,893,179,1,4,http://localhost:8082/room/calendar?roomId=1&startDate=2026-10-01&endDate=2026-10-07,9,0,1
+1789703062568,8,房源详情,200,,房源详情 2-1,text,true,,1088,123,1,2,http://localhost:8082/room/4,8,0,0
+1789703062698,2,订单查询,401,,订单查询 6-1,text,false,"HTTP=401, JSON code=401",490,160,1,7,http://localhost:8082/order/list?page=0&size=10&status=0,2,0,1
+1789703062709,2,加入购物车,401,,加入购物车 8-1,text,false,"HTTP=401, JSON code=401",490,271,1,7,http://localhost:8082/cart/add,2,0,1
+1789703062715,2,购物车查询,401,,购物车查询 9-1,text,false,"HTTP=401, JSON code=401",490,167,1,8,http://localhost:8082/cart/list,2,0,1
+1789703062721,45,文件上传,200,,文件上传 10-1,text,true,,605,1205508,1,9,http://localhost:8082/upload/image,45,0,11
+1789703063698,2,订单查询,401,,订单查询 6-2,text,false,"HTTP=401, JSON code=401",490,160,1,48,http://localhost:8082/order/list?page=0&size=10&status=0,2,0,1
+1789703063698,14,房源浏览,200,,房源浏览 1-2,text,true,,2427,198,1,48,http://localhost:8082/room/list?homestayId=1&page=1&size=10&bedType=&keyword=&status=1&priceRange=0-500,14,0,1
+1789703063716,3,购物车查询,401,,购物车查询 9-2,text,false,"HTTP=401, JSON code=401",490,167,1,49,http://localhost:8082/cart/list,3,0,1
+1789703063719,10,房源详情,200,,房源详情 2-2,text,true,,1004,123,1,48,http://localhost:8082/room/5,10,0,0
+1789703064035,7,日期可订性,200,,日期可订性 3-2,text,true,,893,179,1,61,http://localhost:8082/room/calendar?roomId=2&startDate=2026-10-01&endDate=2026-10-07,7,0,1
+1789703064209,1,加入购物车,401,,加入购物车 8-2,text,false,"HTTP=401, JSON code=401",490,271,1,67,http://localhost:8082/cart/add,1,0,0
+1789703064698,3,订单查询,401,,订单查询 6-3,text,false,"HTTP=401, JSON code=401",490,160,1,87,http://localhost:8082/order/list?page=0&size=10&status=0,3,0,1
+1789703064715,2,购物车查询,401,,购物车查询 9-3,text,false,"HTTP=401, JSON code=401",490,167,1,87,http://localhost:8082/cart/list,2,0,1
+1789703064899,9,房源浏览,200,,房源浏览 1-3,text,true,,1750,201,1,95,http://localhost:8082/room/list?homestayId=1&page=1&size=10&bedType=&keyword=&status=1&priceRange=500-1000,9,0,1
+1789703064919,6,房源详情,200,,房源详情 2-3,text,true,,1048,123,1,95,http://localhost:8082/room/6,6,0,0
+1789703065535,7,日期可订性,200,,日期可订性 3-3,text,true,,893,179,1,120,http://localhost:8082/room/calendar?roomId=3&startDate=2026-10-01&endDate=2026-10-07,7,0,1
+1789703065698,2,订单查询,401,,订单查询 6-4,text,false,"HTTP=401, JSON code=401",490,160,1,127,http://localhost:8082/order/list?page=0&size=10&status=0,2,0,0
+1789703065708,2,加入购物车,401,,加入购物车 8-3,text,false,"HTTP=401, JSON code=401",490,271,1,127,http://localhost:8082/cart/add,2,0,1
+1789703065716,2,购物车查询,401,,购物车查询 9-4,text,false,"HTTP=401, JSON code=401",490,167,1,128,http://localhost:8082/cart/list,2,0,1
+1789703066099,11,房源浏览,200,,房源浏览 1-4,text,true,,3616,193,1,143,http://localhost:8082/room/list?homestayId=1&page=1&size=10&bedType=&keyword=&status=1&priceRange=,11,0,1
+1789703066118,10,房源详情,200,,房源详情 2-4,text,true,,995,123,1,143,http://localhost:8082/room/7,10,0,1
+1789703066699,2,订单查询,401,,订单查询 6-5,text,false,"HTTP=401, JSON code=401",490,160,1,167,http://localhost:8082/order/list?page=0&size=10&status=0,2,0,0
+1789703066715,2,购物车查询,401,,购物车查询 9-5,text,false,"HTTP=401, JSON code=401",490,167,1,167,http://localhost:8082/cart/list,2,0,0
+1789703066721,31,文件上传,200,,文件上传 10-2,text,true,,605,1205532,1,169,http://localhost:8082/upload/image,31,0,1
+1789703067035,7,日期可订性,200,,日期可订性 3-4,text,true,,893,179,1,180,http://localhost:8082/room/calendar?roomId=4&startDate=2026-10-01&endDate=2026-10-07,6,0,1
+1789703067210,2,加入购物车,401,,加入购物车 8-4,text,false,"HTTP=401, JSON code=401",490,271,1,187,http://localhost:8082/cart/add,2,0,1
+1789703067299,14,房源浏览,200,,房源浏览 1-5,text,true,,1604,211,1,191,http://localhost:8082/room/list?homestayId=1&page=1&size=20&bedType=&keyword=大床&status=1&priceRange=,14,0,4
+1789703067318,10,房源详情,200,,房源详情 2-5,text,true,,888,124,1,191,http://localhost:8082/room/36,10,0,1
+1789703067699,2,订单查询,401,,订单查询 6-6,text,false,"HTTP=401, JSON code=401",490,160,1,207,http://localhost:8082/order/list?page=0&size=10&status=0,2,0,0
+1789703067715,2,购物车查询,401,,购物车查询 9-6,text,false,"HTTP=401, JSON code=401",490,167,1,207,http://localhost:8082/cart/list,2,0,1
+1789703068499,7,房源浏览,200,,房源浏览 1-6,text,true,,561,211,1,239,http://localhost:8082/room/list?homestayId=1&page=1&size=20&bedType=&keyword=海景&status=1&priceRange=,7,0,1
+1789703068518,7,房源详情,200,,房源详情 2-6,text,true,,901,124,1,239,http://localhost:8082/room/37,7,0,1
+1789703068535,5,日期可订性,200,,日期可订性 3-5,text,true,,893,179,1,240,http://localhost:8082/room/calendar?roomId=5&startDate=2026-10-01&endDate=2026-10-07,5,0,0
+1789703068698,2,订单查询,401,,订单查询 6-7,text,false,"HTTP=401, JSON code=401",490,160,1,247,http://localhost:8082/order/list?page=0&size=10&status=0,2,0,1
+1789703068708,1,加入购物车,401,,加入购物车 8-5,text,false,"HTTP=401, JSON code=401",490,271,1,247,http://localhost:8082/cart/add,1,0,0
+1789703068716,2,购物车查询,401,,购物车查询 9-7,text,false,"HTTP=401, JSON code=401",490,167,1,247,http://localhost:8082/cart/list,2,0,1
+1789703069698,2,订单查询,401,,订单查询 6-8,text,false,"HTTP=401, JSON code=401",490,160,1,288,http://localhost:8082/order/list?page=0&size=10&status=0,2,0,1
+1789703069699,10,房源浏览,200,,房源浏览 1-7,text,true,,979,211,1,288,http://localhost:8082/room/list?homestayId=1&page=1&size=10&bedType=双床&keyword=&status=1&priceRange=,9,0,1
+1789703069715,3,购物车查询,401,,购物车查询 9-8,text,false,"HTTP=401, JSON code=401",490,167,1,289,http://localhost:8082/cart/list,3,0,1
+1789703069718,9,房源详情,200,,房源详情 2-7,text,true,,1088,123,1,288,http://localhost:8082/room/4,9,0,0
+1789703070035,7,日期可订性,200,,日期可订性 3-6,text,true,,893,179,1,301,http://localhost:8082/room/calendar?roomId=6&startDate=2026-10-01&endDate=2026-10-07,7,0,1
+1789703070208,2,加入购物车,401,,加入购物车 8-6,text,false,"HTTP=401, JSON code=401",490,271,1,307,http://localhost:8082/cart/add,1,0,0
+1789703070698,2,订单查询,401,,订单查询 6-9,text,false,"HTTP=401, JSON code=401",490,160,1,327,http://localhost:8082/order/list?page=0&size=10&status=0,2,0,1
+1789703070715,2,购物车查询,401,,购物车查询 9-9,text,false,"HTTP=401, JSON code=401",490,167,1,327,http://localhost:8082/cart/list,2,0,1
+1789703070722,32,文件上传,200,,文件上传 10-3,text,true,,605,1205529,1,329,http://localhost:8082/upload/image,32,0,1
+1789703070899,7,房源浏览,200,,房源浏览 1-8,text,true,,1177,219,1,335,http://localhost:8082/room/list?homestayId=1&page=1&size=10&bedType=家庭&keyword=&status=1&priceRange=500-1000,7,0,1
+1789703070919,7,房源详情,200,,房源详情 2-8,text,true,,1004,123,1,335,http://localhost:8082/room/5,7,0,0
+1789703071535,8,日期可订性,200,,日期可订性 3-7,text,true,,893,179,1,361,http://localhost:8082/room/calendar?roomId=7&startDate=2026-10-01&endDate=2026-10-07,8,0,1
+1789703071697,2,订单查询,401,,订单查询 6-10,text,false,"HTTP=401, JSON code=401",490,160,1,367,http://localhost:8082/order/list?page=0&size=10&status=0,2,0,1
+1789703071707,3,加入购物车,401,,加入购物车 8-7,text,false,"HTTP=401, JSON code=401",490,271,1,367,http://localhost:8082/cart/add,3,0,1
+1789703071716,3,购物车查询,401,,购物车查询 9-10,text,false,"HTTP=401, JSON code=401",490,167,1,368,http://localhost:8082/cart/list,3,0,1
+1789703072099,6,房源浏览,200,,房源浏览 1-9,text,true,,561,211,1,383,http://localhost:8082/room/list?homestayId=1&page=1&size=10&bedType=&keyword=温馨&status=1&priceRange=,6,0,1
+1789703072119,7,房源详情,200,,房源详情 2-9,text,true,,1048,123,1,383,http://localhost:8082/room/6,7,0,1
+1789703072698,2,订单查询,401,,订单查询 6-11,text,false,"HTTP=401, JSON code=401",490,160,1,407,http://localhost:8082/order/list?page=0&size=10&status=0,2,0,1
+1789703072715,3,购物车查询,401,,购物车查询 9-11,text,false,"HTTP=401, JSON code=401",490,167,1,407,http://localhost:8082/cart/list,3,0,1
+1789703073036,8,日期可订性,200,,日期可订性 3-8,text,true,,893,179,1,421,http://localhost:8082/room/calendar?roomId=8&startDate=2026-10-01&endDate=2026-10-07,8,0,1
+1789703073207,2,加入购物车,401,,加入购物车 8-8,text,false,"HTTP=401, JSON code=401",490,271,1,427,http://localhost:8082/cart/add,2,0,1
+1789703073299,10,房源浏览,200,,房源浏览 1-10,text,true,,1134,219,1,431,http://localhost:8082/room/list?homestayId=1&page=1&size=10&bedType=亲子&keyword=&status=1&priceRange=500-1000,10,0,1
+1789703073318,8,房源详情,200,,房源详情 2-10,text,true,,995,123,1,431,http://localhost:8082/room/7,8,0,0
+1789703073698,2,订单查询,401,,订单查询 6-12,text,false,"HTTP=401, JSON code=401",490,160,1,447,http://localhost:8082/order/list?page=0&size=10&status=0,2,0,1
+1789703073715,2,购物车查询,401,,购物车查询 9-12,text,false,"HTTP=401, JSON code=401",490,167,1,447,http://localhost:8082/cart/list,2,0,0
+1789703074498,10,房源浏览,200,,房源浏览 1-11,text,true,,561,193,1,479,http://localhost:8082/room/list?homestayId=1&page=2&size=10&bedType=&keyword=&status=1&priceRange=,10,0,1
+1789703074518,6,房源详情,200,,房源详情 2-11,text,true,,888,124,1,479,http://localhost:8082/room/36,6,0,1
+1789703074535,6,日期可订性,200,,日期可订性 3-9,text,true,,893,179,1,480,http://localhost:8082/room/calendar?roomId=9&startDate=2026-10-01&endDate=2026-10-07,6,0,1
+1789703074698,3,订单查询,401,,订单查询 6-13,text,false,"HTTP=401, JSON code=401",490,160,1,487,http://localhost:8082/order/list?page=0&size=10&status=0,3,0,1
+1789703074708,1,加入购物车,401,,加入购物车 8-9,text,false,"HTTP=401, JSON code=401",490,271,1,487,http://localhost:8082/cart/add,1,0,0
+1789703074716,2,购物车查询,401,,购物车查询 9-13,text,false,"HTTP=401, JSON code=401",490,167,1,487,http://localhost:8082/cart/list,2,0,1
+1789703074722,34,文件上传,200,,文件上传 10-4,text,true,,605,1205514,1,489,http://localhost:8082/upload/image,34,0,1
+1789703075698,2,订单查询,401,,订单查询 6-14,text,false,"HTTP=401, JSON code=401",490,160,1,528,http://localhost:8082/order/list?page=0&size=10&status=0,2,0,1
+1789703075698,11,房源浏览,200,,房源浏览 1-12,text,true,,3616,198,1,527,http://localhost:8082/room/list?homestayId=1&page=1&size=10&bedType=&keyword=&status=1&priceRange=1000+,11,0,1
+1789703075715,3,购物车查询,401,,购物车查询 9-14,text,false,"HTTP=401, JSON code=401",490,167,1,527,http://localhost:8082/cart/list,3,0,1
+1789703075719,8,房源详情,200,,房源详情 2-12,text,true,,901,124,1,527,http://localhost:8082/room/37,8,0,0
+1789703076035,6,日期可订性,200,,日期可订性 3-10,text,true,,893,180,1,540,http://localhost:8082/room/calendar?roomId=10&startDate=2026-10-01&endDate=2026-10-07,6,0,0
+1789703076208,2,加入购物车,401,,加入购物车 8-10,text,false,"HTTP=401, JSON code=401",490,272,1,547,http://localhost:8082/cart/add,2,0,1
+1789703076699,2,订单查询,401,,订单查询 6-15,text,false,"HTTP=401, JSON code=401",490,160,1,567,http://localhost:8082/order/list?page=0&size=10&status=0,1,0,0
+1789703076715,2,购物车查询,401,,购物车查询 9-15,text,false,"HTTP=401, JSON code=401",490,167,1,567,http://localhost:8082/cart/list,2,0,1
+1789703076902,14,房源浏览,200,,房源浏览 1-13,text,true,,3616,193,1,575,http://localhost:8082/room/list?homestayId=1&page=1&size=10&bedType=&keyword=&status=1&priceRange=,14,0,1
+1789703076919,7,房源详情,200,,房源详情 2-13,text,true,,1088,123,1,575,http://localhost:8082/room/4,7,0,1
+1789703077507,24,创建订单,401,,创建订单 4-191,text,false,"HTTP=401, JSON code=401",490,386,300,598,http://localhost:8082/order/create,24,0,23
+1789703077507,39,创建订单,401,,创建订单 4-214,text,false,"HTTP=401, JSON code=401",490,386,300,598,http://localhost:8082/order/create,39,0,37
+1789703077506,26,创建订单,401,,创建订单 4-226,text,false,"HTTP=401, JSON code=401",490,386,300,598,http://localhost:8082/order/create,26,0,24
+1789703077507,24,创建订单,401,,创建订单 4-223,text,false,"HTTP=401, JSON code=401",490,386,300,598,http://localhost:8082/order/create,24,0,23
+1789703077506,30,创建订单,401,,创建订单 4-239,text,false,"HTTP=401, JSON code=401",490,386,300,598,http://localhost:8082/order/create,30,0,25
+1789703077506,28,创建订单,401,,创建订单 4-242,text,false,"HTTP=401, JSON code=401",490,386,300,598,http://localhost:8082/order/create,28,0,26
+1789703077507,24,创建订单,401,,创建订单 4-224,text,false,"HTTP=401, JSON code=401",490,386,300,598,http://localhost:8082/order/create,24,0,23
+1789703077502,75,创建订单,401,,创建订单 4-131,text,false,"HTTP=401, JSON code=401",490,386,300,600,http://localhost:8082/order/create,75,0,72
+1789703077501,78,创建订单,401,,创建订单 4-290,text,false,"HTTP=401, JSON code=401",490,386,300,600,http://localhost:8082/order/create,78,0,76
+1789703077506,25,创建订单,401,,创建订单 4-230,text,false,"HTTP=401, JSON code=401",490,386,300,598,http://localhost:8082/order/create,25,0,23
+1789703077502,67,创建订单,401,,创建订单 4-38,text,false,"HTTP=401, JSON code=401",490,386,300,600,http://localhost:8082/order/create,67,0,63
+1789703077502,75,创建订单,401,,创建订单 4-136,text,false,"HTTP=401, JSON code=401",490,386,300,600,http://localhost:8082/order/create,75,0,68
+1789703077506,26,创建订单,401,,创建订单 4-234,text,false,"HTTP=401, JSON code=401",490,386,300,598,http://localhost:8082/order/create,26,0,24
+1789703077509,57,创建订单,401,,创建订单 4-207,text,false,"HTTP=401, JSON code=401",490,386,300,600,http://localhost:8082/order/create,57,0,46
+1789703077506,27,创建订单,401,,创建订单 4-227,text,false,"HTTP=401, JSON code=401",490,386,300,598,http://localhost:8082/order/create,27,0,24
+1789703077506,29,创建订单,401,,创建订单 4-240,text,false,"HTTP=401, JSON code=401",490,386,300,598,http://localhost:8082/order/create,29,0,27
+1789703077493,38,创建订单,401,,创建订单 4-1,text,false,"HTTP=401, JSON code=401",490,386,300,598,http://localhost:8082/order/create,38,0,37
+1789703077509,36,创建订单,401,,创建订单 4-231,text,false,"HTTP=401, JSON code=401",490,386,300,598,http://localhost:8082/order/create,36,0,34
+1789703077507,58,创建订单,401,,创建订单 4-212,text,false,"HTTP=401, JSON code=401",490,386,300,600,http://localhost:8082/order/create,58,0,39
+1789703077506,25,创建订单,401,,创建订单 4-235,text,false,"HTTP=401, JSON code=401",490,386,300,598,http://localhost:8082/order/create,25,0,24
+1789703077506,29,创建订单,401,,创建订单 4-184,text,false,"HTTP=401, JSON code=401",490,386,300,598,http://localhost:8082/order/create,29,0,25
+1789703077507,36,创建订单,401,,创建订单 4-216,text,false,"HTTP=401, JSON code=401",490,386,300,598,http://localhost:8082/order/create,36,0,28
+1789703077509,60,创建订单,401,,创建订单 4-261,text,false,"HTTP=401, JSON code=401",490,386,300,600,http://localhost:8082/order/create,60,0,47
+1789703077504,169,创建订单,401,,创建订单 4-279,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,169,0,166
+1789703077508,72,创建订单,401,,创建订单 4-222,text,false,"HTTP=401, JSON code=401",490,386,300,600,http://localhost:8082/order/create,72,0,41
+1789703077507,35,创建订单,401,,创建订单 4-195,text,false,"HTTP=401, JSON code=401",490,386,300,598,http://localhost:8082/order/create,35,0,33
+1789703077502,67,创建订单,401,,创建订单 4-135,text,false,"HTTP=401, JSON code=401",490,386,300,600,http://localhost:8082/order/create,67,0,61
+1789703077501,78,创建订单,401,,创建订单 4-94,text,false,"HTTP=401, JSON code=401",490,386,300,600,http://localhost:8082/order/create,78,0,70
+1789703077503,66,创建订单,401,,创建订单 4-123,text,false,"HTTP=401, JSON code=401",490,386,300,600,http://localhost:8082/order/create,66,0,53
+1789703077506,25,创建订单,401,,创建订单 4-225,text,false,"HTTP=401, JSON code=401",490,386,300,598,http://localhost:8082/order/create,25,0,23
+1789703077503,82,创建订单,401,,创建订单 4-119,text,false,"HTTP=401, JSON code=401",490,386,300,600,http://localhost:8082/order/create,82,0,77
+1789703077504,114,创建订单,401,,创建订单 4-274,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,113,0,45
+1789703077504,171,创建订单,401,,创建订单 4-278,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,171,0,169
+1789703077505,174,创建订单,401,,创建订单 4-257,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,174,0,173
+1789703077509,60,创建订单,401,,创建订单 4-252,text,false,"HTTP=401, JSON code=401",490,386,300,600,http://localhost:8082/order/create,60,0,48
+1789703077508,117,创建订单,401,,创建订单 4-270,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,117,0,44
+1789703077500,212,创建订单,401,,创建订单 4-180,text,false,"HTTP=401, JSON code=401",490,386,300,602,http://localhost:8082/order/create,212,0,211
+1789703077502,73,创建订单,401,,创建订单 4-104,text,false,"HTTP=401, JSON code=401",490,386,300,600,http://localhost:8082/order/create,73,0,68
+1789703077506,60,创建订单,401,,创建订单 4-248,text,false,"HTTP=401, JSON code=401",490,386,300,600,http://localhost:8082/order/create,60,0,38
+1789703077498,198,创建订单,401,,创建订单 4-63,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,198,0,197
+1789703077503,85,创建订单,401,,创建订单 4-120,text,false,"HTTP=401, JSON code=401",490,386,300,600,http://localhost:8082/order/create,85,0,78
+1789703077495,199,创建订单,401,,创建订单 4-43,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,199,0,196
+1789703077507,57,创建订单,401,,创建订单 4-209,text,false,"HTTP=401, JSON code=401",490,386,300,600,http://localhost:8082/order/create,57,0,37
+1789703077507,31,创建订单,401,,创建订单 4-217,text,false,"HTTP=401, JSON code=401",490,386,300,598,http://localhost:8082/order/create,30,0,24
+1789703077508,149,创建订单,401,,创建订单 4-244,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,149,0,43
+1789703077507,58,创建订单,401,,创建订单 4-208,text,false,"HTTP=401, JSON code=401",490,386,300,600,http://localhost:8082/order/create,58,0,41
+1789703077497,176,创建订单,401,,创建订单 4-161,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,176,0,173
+1789703077506,36,创建订单,401,,创建订单 4-247,text,false,"HTTP=401, JSON code=401",490,386,300,598,http://localhost:8082/order/create,36,0,34
+1789703077504,170,创建订单,401,,创建订单 4-280,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,170,0,167
+1789703077507,58,创建订单,401,,创建订单 4-200,text,false,"HTTP=401, JSON code=401",490,386,300,600,http://localhost:8082/order/create,58,0,39
+1789703077502,74,创建订单,401,,创建订单 4-96,text,false,"HTTP=401, JSON code=401",490,386,300,600,http://localhost:8082/order/create,74,0,72
+1789703077505,174,创建订单,401,,创建订单 4-258,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,174,0,174
+1789703077502,83,创建订单,401,,创建订单 4-126,text,false,"HTTP=401, JSON code=401",490,386,300,600,http://localhost:8082/order/create,83,0,79
+1789703077507,58,创建订单,401,,创建订单 4-205,text,false,"HTTP=401, JSON code=401",490,386,300,600,http://localhost:8082/order/create,58,0,39
+1789703077503,122,创建订单,401,,创建订单 4-295,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,122,0,51
+1789703077507,58,创建订单,401,,创建订单 4-219,text,false,"HTTP=401, JSON code=401",490,386,300,600,http://localhost:8082/order/create,58,0,23
+1789703077500,211,创建订单,401,,创建订单 4-186,text,false,"HTTP=401, JSON code=401",490,386,300,602,http://localhost:8082/order/create,211,0,210
+1789703077495,202,创建订单,401,,创建订单 4-74,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,202,0,201
+1789703077501,76,创建订单,401,,创建订单 4-297,text,false,"HTTP=401, JSON code=401",490,386,300,600,http://localhost:8082/order/create,76,0,69
+1789703077503,128,创建订单,401,,创建订单 4-150,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,128,0,125
+1789703077502,78,创建订单,401,,创建订单 4-105,text,false,"HTTP=401, JSON code=401",490,386,300,600,http://localhost:8082/order/create,78,0,75
+1789703077506,59,创建订单,401,,创建订单 4-236,text,false,"HTTP=401, JSON code=401",490,386,300,600,http://localhost:8082/order/create,59,0,24
+1789703077508,80,创建订单,401,,创建订单 4-228,text,false,"HTTP=401, JSON code=401",490,386,300,600,http://localhost:8082/order/create,80,0,41
+1789703077496,187,创建订单,401,,创建订单 4-124,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,187,0,186
+1789703077497,187,创建订单,401,,创建订单 4-151,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,187,0,186
+1789703077501,99,创建订单,401,,创建订单 4-265,text,false,"HTTP=401, JSON code=401",490,386,300,600,http://localhost:8082/order/create,99,0,90
+1789703077495,205,创建订单,401,,创建订单 4-61,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,205,0,203
+1789703077503,88,创建订单,401,,创建订单 4-117,text,false,"HTTP=401, JSON code=401",490,386,300,600,http://localhost:8082/order/create,88,0,82
+1789703077498,171,创建订单,401,,创建订单 4-166,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,171,0,169
+1789703077500,212,创建订单,401,,创建订单 4-232,text,false,"HTTP=401, JSON code=401",490,386,300,602,http://localhost:8082/order/create,212,0,211
+1789703077501,68,创建订单,401,,创建订单 4-149,text,false,"HTTP=401, JSON code=401",490,386,300,600,http://localhost:8082/order/create,68,0,67
+1789703077508,144,创建订单,401,,创建订单 4-294,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,144,0,46
+1789703077495,239,创建订单,401,,创建订单 4-21,text,false,"HTTP=401, JSON code=401",490,386,300,604,http://localhost:8082/order/create,239,0,238
+1789703077494,216,创建订单,401,,创建订单 4-10,text,false,"HTTP=401, JSON code=401",490,386,300,602,http://localhost:8082/order/create,216,0,215
+1789703077502,77,创建订单,401,,创建订单 4-133,text,false,"HTTP=401, JSON code=401",490,386,300,600,http://localhost:8082/order/create,77,0,73
+1789703077496,184,创建订单,401,,创建订单 4-143,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,184,0,183
+1789703077507,59,创建订单,401,,创建订单 4-210,text,false,"HTTP=401, JSON code=401",490,386,300,600,http://localhost:8082/order/create,59,0,41
+1789703077500,213,创建订单,401,,创建订单 4-72,text,false,"HTTP=401, JSON code=401",490,386,300,602,http://localhost:8082/order/create,213,0,212
+1789703077508,105,创建订单,401,,创建订单 4-281,text,false,"HTTP=401, JSON code=401",490,386,300,600,http://localhost:8082/order/create,105,0,45
+1789703077498,193,创建订单,401,,创建订单 4-54,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,193,0,191
+1789703077499,206,创建订单,401,,创建订单 4-64,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,206,0,204
+1789703077496,186,创建订单,401,,创建订单 4-35,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,186,0,185
+1789703077494,237,创建订单,401,,创建订单 4-18,text,false,"HTTP=401, JSON code=401",490,386,300,604,http://localhost:8082/order/create,237,0,236
+1789703077496,188,创建订单,401,,创建订单 4-112,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,188,0,187
+1789703077499,205,创建订单,401,,创建订单 4-211,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,205,0,204
+1789703077493,220,创建订单,401,,创建订单 4-14,text,false,"HTTP=401, JSON code=401",490,386,300,602,http://localhost:8082/order/create,220,0,218
+1789703077507,59,创建订单,401,,创建订单 4-221,text,false,"HTTP=401, JSON code=401",490,386,300,600,http://localhost:8082/order/create,59,0,23
+1789703077495,194,创建订单,401,,创建订单 4-46,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,194,0,192
+1789703077504,120,创建订单,401,,创建订单 4-264,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,120,0,45
+1789703077500,219,创建订单,401,,创建订单 4-259,text,false,"HTTP=401, JSON code=401",490,386,300,602,http://localhost:8082/order/create,219,0,219
+1789703077499,205,创建订单,401,,创建订单 4-197,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,205,0,204
+1789703077509,60,创建订单,401,,创建订单 4-299,text,false,"HTTP=401, JSON code=401",490,386,300,600,http://localhost:8082/order/create,60,0,46
+1789703077494,235,创建订单,401,,创建订单 4-36,text,false,"HTTP=401, JSON code=401",490,386,300,604,http://localhost:8082/order/create,235,0,235
+1789703077509,131,创建订单,401,,创建订单 4-203,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,131,0,46
+1789703077710,9,加入购物车,401,,加入购物车 8-11,text,false,"HTTP=401, JSON code=401",490,272,1,602,http://localhost:8082/cart/add,9,0,7
+1789703077507,58,创建订单,401,,创建订单 4-204,text,false,"HTTP=401, JSON code=401",490,386,300,600,http://localhost:8082/order/create,58,0,41
+1789703077496,187,创建订单,401,,创建订单 4-109,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,187,0,186
+1789703077508,117,创建订单,401,,创建订单 4-289,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,117,0,45
+1789703077505,119,创建订单,401,,创建订单 4-260,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,119,0,44
+1789703077497,189,创建订单,401,,创建订单 4-152,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,189,0,187
+1789703077497,189,创建订单,401,,创建订单 4-162,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,189,0,188
+1789703077496,185,创建订单,401,,创建订单 4-138,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,185,0,184
+1789703077499,198,创建订单,401,,创建订单 4-199,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,198,0,197
+1789703077506,176,创建订单,401,,创建订单 4-237,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,176,0,175
+1789703077503,76,创建订单,401,,创建订单 4-128,text,false,"HTTP=401, JSON code=401",490,386,300,600,http://localhost:8082/order/create,76,0,74
+1789703077494,217,创建订单,401,,创建订单 4-3,text,false,"HTTP=401, JSON code=401",490,386,300,602,http://localhost:8082/order/create,217,0,216
+1789703077493,222,创建订单,401,,创建订单 4-9,text,false,"HTTP=401, JSON code=401",490,386,300,602,http://localhost:8082/order/create,222,0,222
+1789703077496,189,创建订单,401,,创建订单 4-33,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,189,0,188
+1789703077506,176,创建订单,401,,创建订单 4-249,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,176,0,175
+1789703077503,87,创建订单,401,,创建订单 4-122,text,false,"HTTP=401, JSON code=401",490,386,300,600,http://localhost:8082/order/create,87,0,80
+1789703077498,190,创建订单,401,,创建订单 4-51,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,190,0,187
+1789703077504,114,创建订单,401,,创建订单 4-269,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,114,0,45
+1789703077494,211,创建订单,401,,创建订单 4-25,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,211,0,210
+1789703077508,104,创建订单,401,,创建订单 4-266,text,false,"HTTP=401, JSON code=401",490,386,300,600,http://localhost:8082/order/create,104,0,44
+1789703077494,210,创建订单,401,,创建订单 4-49,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,210,0,209
+1789703077493,222,创建订单,401,,创建订单 4-6,text,false,"HTTP=401, JSON code=401",490,386,300,602,http://localhost:8082/order/create,222,0,222
+1789703077493,222,创建订单,401,,创建订单 4-13,text,false,"HTTP=401, JSON code=401",490,386,300,602,http://localhost:8082/order/create,222,0,221
+1789703077495,204,创建订单,401,,创建订单 4-73,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,204,0,202
+1789703077496,240,创建订单,401,,创建订单 4-108,text,false,"HTTP=401, JSON code=401",490,386,300,604,http://localhost:8082/order/create,240,0,238
+1789703077499,206,创建订单,401,,创建订单 4-68,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,206,0,205
+1789703077501,221,创建订单,401,,创建订单 4-158,text,false,"HTTP=401, JSON code=401",490,386,300,603,http://localhost:8082/order/create,221,0,220
+1789703077500,219,创建订单,401,,创建订单 4-79,text,false,"HTTP=401, JSON code=401",490,386,300,602,http://localhost:8082/order/create,219,0,216
+1789703077503,121,创建订单,401,,创建订单 4-116,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,121,0,52
+1789703077497,181,创建订单,401,,创建订单 4-146,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,181,0,179
+1789703077501,83,创建订单,401,,创建订单 4-91,text,false,"HTTP=401, JSON code=401",490,386,300,600,http://localhost:8082/order/create,83,0,78
+1789703077496,240,创建订单,401,,创建订单 4-32,text,false,"HTTP=401, JSON code=401",490,386,300,604,http://localhost:8082/order/create,240,0,238
+1789703077494,237,创建订单,401,,创建订单 4-24,text,false,"HTTP=401, JSON code=401",490,386,300,604,http://localhost:8082/order/create,237,0,236
+1789703077508,60,创建订单,401,,创建订单 4-298,text,false,"HTTP=401, JSON code=401",490,386,300,600,http://localhost:8082/order/create,60,0,47
+1789703077501,130,创建订单,401,,创建订单 4-271,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,130,0,128
+1789703077497,181,创建订单,401,,创建订单 4-98,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,181,0,180
+1789703077500,219,创建订单,401,,创建订单 4-172,text,false,"HTTP=401, JSON code=401",490,386,300,602,http://localhost:8082/order/create,219,0,216
+1789703077497,189,创建订单,401,,创建订单 4-156,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,189,0,187
+1789703077509,59,创建订单,401,,创建订单 4-262,text,false,"HTTP=401, JSON code=401",490,386,300,600,http://localhost:8082/order/create,59,0,54
+1789703077503,148,创建订单,401,,创建订单 4-130,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,148,0,51
+1789703077504,167,创建订单,401,,创建订单 4-284,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,167,0,165
+1789703077504,166,创建订单,401,,创建订单 4-287,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,166,0,164
+1789703077503,84,创建订单,401,,创建订单 4-125,text,false,"HTTP=401, JSON code=401",490,386,300,600,http://localhost:8082/order/create,84,0,82
+1789703077494,209,创建订单,401,,创建订单 4-22,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,209,0,208
+1789703077500,169,创建订单,401,,创建订单 4-268,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,169,0,167
+1789703077508,145,创建订单,401,,创建订单 4-275,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,145,0,45
+1789703077502,145,创建订单,401,,创建订单 4-142,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,145,0,60
+1789703077501,130,创建订单,401,,创建订单 4-85,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,130,0,128
+1789703077503,149,创建订单,401,,创建订单 4-121,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,149,0,52
+1789703077496,240,创建订单,401,,创建订单 4-113,text,false,"HTTP=401, JSON code=401",490,386,300,604,http://localhost:8082/order/create,240,0,239
+1789703077508,144,创建订单,401,,创建订单 4-256,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,144,0,43
+1789703077498,172,创建订单,401,,创建订单 4-82,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,172,0,171
+1789703077508,146,创建订单,401,,创建订单 4-283,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,146,0,44
+1789703077509,148,创建订单,401,,创建订单 4-220,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,148,0,48
+1789703077503,160,创建订单,401,,创建订单 4-129,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,160,0,51
+1789703077494,216,创建订单,401,,创建订单 4-27,text,false,"HTTP=401, JSON code=401",490,386,300,602,http://localhost:8082/order/create,216,0,215
+1789703077500,212,创建订单,401,,创建订单 4-71,text,false,"HTTP=401, JSON code=401",490,386,300,602,http://localhost:8082/order/create,212,0,211
+1789703077497,190,创建订单,401,,创建订单 4-90,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,190,0,188
+1789703077493,219,创建订单,401,,创建订单 4-16,text,false,"HTTP=401, JSON code=401",490,386,300,602,http://localhost:8082/order/create,219,0,218
+1789703077502,75,创建订单,401,,创建订单 4-137,text,false,"HTTP=401, JSON code=401",490,386,300,600,http://localhost:8082/order/create,75,0,68
+1789703077555,94,日期可订性,200,,日期可订性 3-11,text,true,,893,180,1,601,http://localhost:8082/room/calendar?roomId=11&startDate=2026-10-01&endDate=2026-10-07,94,0,1
+1789703077494,215,创建订单,401,,创建订单 4-31,text,false,"HTTP=401, JSON code=401",490,386,300,602,http://localhost:8082/order/create,215,0,213
+1789703077500,218,创建订单,401,,创建订单 4-175,text,false,"HTTP=401, JSON code=401",490,386,300,602,http://localhost:8082/order/create,218,0,215
+1789703077500,221,创建订单,401,,创建订单 4-163,text,false,"HTTP=401, JSON code=401",490,386,300,603,http://localhost:8082/order/create,221,0,220
+1789703077494,237,创建订单,401,,创建订单 4-34,text,false,"HTTP=401, JSON code=401",490,386,300,604,http://localhost:8082/order/create,237,0,235
+1789703077506,176,创建订单,401,,创建订单 4-233,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,176,0,175
+1789703077494,235,创建订单,401,,创建订单 4-15,text,false,"HTTP=401, JSON code=401",490,386,300,604,http://localhost:8082/order/create,235,0,233
+1789703077504,174,创建订单,401,,创建订单 4-272,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,174,0,172
+1789703077508,156,创建订单,401,,创建订单 4-276,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,156,0,46
+1789703077496,187,创建订单,401,,创建订单 4-37,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,187,0,185
+1789703077504,173,创建订单,401,,创建订单 4-273,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,173,0,172
+1789703077504,166,创建订单,401,,创建订单 4-88,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,166,0,165
+1789703077495,240,创建订单,401,,创建订单 4-44,text,false,"HTTP=401, JSON code=401",490,386,300,604,http://localhost:8082/order/create,240,0,239
+1789703077499,207,创建订单,401,,创建订单 4-192,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,207,0,205
+1789703077499,210,创建订单,401,,创建订单 4-194,text,false,"HTTP=401, JSON code=401",490,386,300,602,http://localhost:8082/order/create,210,0,208
+1789703077500,215,创建订单,401,,创建订单 4-77,text,false,"HTTP=401, JSON code=401",490,386,300,602,http://localhost:8082/order/create,215,0,214
+1789703077495,198,创建订单,401,,创建订单 4-45,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,198,0,196
+1789703077499,203,创建订单,401,,创建订单 4-202,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,203,0,202
+1789703077500,219,创建订单,401,,创建订单 4-171,text,false,"HTTP=401, JSON code=401",490,386,300,602,http://localhost:8082/order/create,219,0,216
+1789703077494,211,创建订单,401,,创建订单 4-40,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,211,0,210
+1789703077498,198,创建订单,401,,创建订单 4-182,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,198,0,196
+1789703077502,66,创建订单,401,,创建订单 4-141,text,false,"HTTP=401, JSON code=401",490,386,300,600,http://localhost:8082/order/create,66,0,60
+1789703077499,198,创建订单,401,,创建订单 4-62,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,198,0,197
+1789703077498,193,创建订单,401,,创建订单 4-178,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,193,0,191
+1789703077501,89,创建订单,401,,创建订单 4-159,text,false,"HTTP=401, JSON code=401",490,386,300,600,http://localhost:8082/order/create,89,0,84
+1789703077500,213,创建订单,401,,创建订单 4-246,text,false,"HTTP=401, JSON code=401",490,386,300,602,http://localhost:8082/order/create,213,0,212
+1789703077498,190,创建订单,401,,创建订单 4-86,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,190,0,187
+1789703077494,208,创建订单,401,,创建订单 4-20,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,208,0,206
+1789703077508,110,创建订单,401,,创建订单 4-238,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,110,0,42
+1789703077497,182,创建订单,401,,创建订单 4-41,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,182,0,179
+1789703077497,189,创建订单,401,,创建订单 4-155,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,189,0,187
+1789703077495,199,创建订单,401,,创建订单 4-52,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,199,0,198
+1789703077501,220,创建订单,401,,创建订单 4-288,text,false,"HTTP=401, JSON code=401",490,386,300,603,http://localhost:8082/order/create,220,0,220
+1789703077500,219,创建订单,401,,创建订单 4-170,text,false,"HTTP=401, JSON code=401",490,386,300,602,http://localhost:8082/order/create,219,0,219
+1789703077503,97,创建订单,401,,创建订单 4-134,text,false,"HTTP=401, JSON code=401",490,386,300,600,http://localhost:8082/order/create,97,0,91
+1789703077501,224,创建订单,401,,创建订单 4-293,text,false,"HTTP=401, JSON code=401",490,386,300,603,http://localhost:8082/order/create,224,0,222
+1789703077495,206,创建订单,401,,创建订单 4-57,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,206,0,204
+1789703077495,202,创建订单,401,,创建订单 4-55,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,202,0,201
+1789703077499,210,创建订单,401,,创建订单 4-229,text,false,"HTTP=401, JSON code=401",490,386,300,602,http://localhost:8082/order/create,210,0,209
+1789703077501,220,创建订单,401,,创建订单 4-282,text,false,"HTTP=401, JSON code=401",490,386,300,603,http://localhost:8082/order/create,220,0,219
+1789703077494,210,创建订单,401,,创建订单 4-42,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,210,0,209
+1789703077493,232,创建订单,401,,创建订单 4-2,text,false,"HTTP=401, JSON code=401",490,386,300,603,http://localhost:8082/order/create,232,0,231
+1789703077497,188,创建订单,401,,创建订单 4-157,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,188,0,187
+1789703077498,191,创建订单,401,,创建订单 4-164,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,190,0,188
+1789703077504,174,创建订单,401,,创建订单 4-267,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,174,0,172
+1789703077494,216,创建订单,401,,创建订单 4-11,text,false,"HTTP=401, JSON code=401",490,386,300,602,http://localhost:8082/order/create,216,0,215
+1789703077495,196,创建订单,401,,创建订单 4-26,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,196,0,194
+1789703077496,186,创建订单,401,,创建订单 4-103,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,186,0,185
+1789703077505,173,创建订单,401,,创建订单 4-263,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,173,0,172
+1789703077508,117,创建订单,401,,创建订单 4-245,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,117,0,43
+1789703077508,145,创建订单,401,,创建订单 4-241,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,145,0,43
+1789703077497,176,创建订单,401,,创建订单 4-84,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,176,0,175
+1789703077504,165,创建订单,401,,创建订单 4-95,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,165,0,163
+1789703077503,82,创建订单,401,,创建订单 4-110,text,false,"HTTP=401, JSON code=401",490,386,300,600,http://localhost:8082/order/create,82,0,78
+1789703077501,163,创建订单,401,,创建订单 4-148,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,163,0,63
+1789703077508,145,创建订单,401,,创建订单 4-296,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,145,0,45
+1789703077509,152,创建订单,401,,创建订单 4-215,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,152,0,47
+1789703077504,121,创建订单,401,,创建订单 4-286,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,121,0,47
+1789703077502,149,创建订单,401,,创建订单 4-139,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,149,0,63
+1789703077498,193,创建订单,401,,创建订单 4-76,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,193,0,191
+1789703077496,188,创建订单,401,,创建订单 4-107,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,188,0,187
+1789703077499,211,创建订单,401,,创建订单 4-185,text,false,"HTTP=401, JSON code=401",490,386,300,602,http://localhost:8082/order/create,211,0,210
+1789703077497,176,创建订单,401,,创建订单 4-47,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,176,0,173
+1789703077506,176,创建订单,401,,创建订单 4-251,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,175,0,175
+1789703077504,173,创建订单,401,,创建订单 4-277,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,173,0,172
+1789703077498,192,创建订单,401,,创建订单 4-169,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,192,0,190
+1789703077497,181,创建订单,401,,创建订单 4-99,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,181,0,179
+1789703077496,190,创建订单,401,,创建订单 4-30,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,190,0,188
+1789703077504,173,创建订单,401,,创建订单 4-165,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,173,0,171
+1789703077501,80,创建订单,401,,创建订单 4-285,text,false,"HTTP=401, JSON code=401",490,386,300,600,http://localhost:8082/order/create,80,0,79
+1789703077503,161,创建订单,401,,创建订单 4-127,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,161,0,51
+1789703077508,153,创建订单,401,,创建订单 4-218,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,153,0,42
+1789703077497,181,创建订单,401,,创建订单 4-97,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,181,0,179
+1789703077501,222,创建订单,401,,创建订单 4-292,text,false,"HTTP=401, JSON code=401",490,386,300,603,http://localhost:8082/order/create,222,0,221
+1789703077493,220,创建订单,401,,创建订单 4-4,text,false,"HTTP=401, JSON code=401",490,386,300,602,http://localhost:8082/order/create,220,0,219
+1789703077500,210,创建订单,401,,创建订单 4-190,text,false,"HTTP=401, JSON code=401",490,386,300,602,http://localhost:8082/order/create,210,0,209
+1789703077500,219,创建订单,401,,创建订单 4-173,text,false,"HTTP=401, JSON code=401",490,386,300,602,http://localhost:8082/order/create,219,0,216
+1789703077502,222,创建订单,401,,创建订单 4-147,text,false,"HTTP=401, JSON code=401",490,386,300,603,http://localhost:8082/order/create,222,0,221
+1789703077498,190,创建订单,401,,创建订单 4-81,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,190,0,188
+1789703077503,85,创建订单,401,,创建订单 4-145,text,false,"HTTP=401, JSON code=401",490,386,300,600,http://localhost:8082/order/create,85,0,83
+1789703077501,220,创建订单,401,,创建订单 4-87,text,false,"HTTP=401, JSON code=401",490,386,300,603,http://localhost:8082/order/create,220,0,220
+1789703077508,116,创建订单,401,,创建订单 4-213,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,116,0,42
+1789703077498,194,创建订单,401,,创建订单 4-179,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,194,0,193
+1789703077501,220,创建订单,401,,创建订单 4-167,text,false,"HTTP=401, JSON code=401",490,386,300,603,http://localhost:8082/order/create,220,0,219
+1789703077495,202,创建订单,401,,创建订单 4-53,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,202,0,200
+1789703077498,193,创建订单,401,,创建订单 4-174,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,193,0,191
+1789703077496,183,创建订单,401,,创建订单 4-140,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,183,0,183
+1789703077505,176,创建订单,401,,创建订单 4-250,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,176,0,175
+1789703077495,205,创建订单,401,,创建订单 4-67,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,205,0,204
+1789703077499,201,创建订单,401,,创建订单 4-58,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,201,0,198
+1789703077495,199,创建订单,401,,创建订单 4-50,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,199,0,196
+1789703077500,215,创建订单,401,,创建订单 4-254,text,false,"HTTP=401, JSON code=401",490,386,300,602,http://localhost:8082/order/create,215,0,214
+1789703077498,198,创建订单,401,,创建订单 4-193,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,198,0,197
+1789703077498,193,创建订单,401,,创建订单 4-78,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,193,0,191
+1789703077499,202,创建订单,401,,创建订单 4-60,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,202,0,200
+1789703077494,235,创建订单,401,,创建订单 4-12,text,false,"HTTP=401, JSON code=401",490,386,300,604,http://localhost:8082/order/create,235,0,233
+1789703077496,191,创建订单,401,,创建订单 4-106,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,190,0,189
+1789703077498,198,创建订单,401,,创建订单 4-69,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,198,0,197
+1789703077493,222,创建订单,401,,创建订单 4-300,text,false,"HTTP=401, JSON code=401",490,386,300,602,http://localhost:8082/order/create,222,0,222
+1789703077500,212,创建订单,401,,创建订单 4-181,text,false,"HTTP=401, JSON code=401",490,386,300,602,http://localhost:8082/order/create,212,0,211
+1789703077499,197,创建订单,401,,创建订单 4-188,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,197,0,196
+1789703077499,201,创建订单,401,,创建订单 4-59,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,201,0,199
+1789703077507,58,创建订单,401,,创建订单 4-206,text,false,"HTTP=401, JSON code=401",490,386,300,600,http://localhost:8082/order/create,58,0,41
+1789703077496,192,创建订单,401,,创建订单 4-29,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,192,0,189
+1789703077498,190,创建订单,401,,创建订单 4-80,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,190,0,187
+1789703077497,191,创建订单,401,,创建订单 4-92,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,191,0,188
+1789703077496,185,创建订单,401,,创建订单 4-132,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,185,0,184
+1789703077494,207,创建订单,401,,创建订单 4-17,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,207,0,206
+1789703077494,208,创建订单,401,,创建订单 4-5,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,208,0,206
+1789703077494,235,创建订单,401,,创建订单 4-23,text,false,"HTTP=401, JSON code=401",490,386,300,604,http://localhost:8082/order/create,235,0,233
+1789703077505,175,创建订单,401,,创建订单 4-255,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,175,0,174
+1789703077499,210,创建订单,401,,创建订单 4-183,text,false,"HTTP=401, JSON code=401",490,386,300,602,http://localhost:8082/order/create,210,0,209
+1789703077500,215,创建订单,401,,创建订单 4-177,text,false,"HTTP=401, JSON code=401",490,386,300,602,http://localhost:8082/order/create,215,0,214
+1789703077500,215,创建订单,401,,创建订单 4-75,text,false,"HTTP=401, JSON code=401",490,386,300,602,http://localhost:8082/order/create,215,0,214
+1789703077500,219,创建订单,401,,创建订单 4-253,text,false,"HTTP=401, JSON code=401",490,386,300,602,http://localhost:8082/order/create,219,0,216
+1789703077498,198,创建订单,401,,创建订单 4-187,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,198,0,197
+1789703077500,215,创建订单,401,,创建订单 4-243,text,false,"HTTP=401, JSON code=401",490,386,300,602,http://localhost:8082/order/create,215,0,214
+1789703077495,197,创建订单,401,,创建订单 4-48,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,197,0,196
+1789703077726,10,购物车查询,401,,购物车查询 9-16,text,false,"HTTP=401, JSON code=401",490,167,1,604,http://localhost:8082/cart/list,10,0,2
+1789703077495,194,创建订单,401,,创建订单 4-28,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,193,0,191
+1789703077505,175,创建订单,401,,创建订单 4-176,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,175,0,174
+1789703077506,176,创建订单,401,,创建订单 4-189,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,176,0,175
+1789703077494,237,创建订单,401,,创建订单 4-7,text,false,"HTTP=401, JSON code=401",490,386,300,604,http://localhost:8082/order/create,237,0,235
+1789703077502,149,创建订单,401,,创建订单 4-144,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,149,0,61
+1789703077496,185,创建订单,401,,创建订单 4-102,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,185,0,185
+1789703077503,158,创建订单,401,,创建订单 4-115,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,158,0,54
+1789703077496,239,创建订单,401,,创建订单 4-101,text,false,"HTTP=401, JSON code=401",490,386,300,604,http://localhost:8082/order/create,239,0,238
+1789703077496,240,创建订单,401,,创建订单 4-111,text,false,"HTTP=401, JSON code=401",490,386,300,604,http://localhost:8082/order/create,240,0,238
+1789703077496,183,创建订单,401,,创建订单 4-100,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,183,0,182
+1789703077501,220,创建订单,401,,创建订单 4-154,text,false,"HTTP=401, JSON code=401",490,386,300,603,http://localhost:8082/order/create,220,0,220
+1789703077500,211,创建订单,401,,创建订单 4-70,text,false,"HTTP=401, JSON code=401",490,386,300,602,http://localhost:8082/order/create,211,0,210
+1789703077495,205,创建订单,401,,创建订单 4-65,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,205,0,203
+1789703077494,208,创建订单,401,,创建订单 4-19,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,208,0,206
+1789703077505,61,创建订单,401,,创建订单 4-168,text,false,"HTTP=401, JSON code=401",490,386,300,600,http://localhost:8082/order/create,61,0,42
+1789703077501,220,创建订单,401,,创建订单 4-160,text,false,"HTTP=401, JSON code=401",490,386,300,603,http://localhost:8082/order/create,220,0,219
+1789703077495,198,创建订单,401,,创建订单 4-89,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,198,0,195
+1789703077498,199,创建订单,401,,创建订单 4-66,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,199,0,197
+1789703077503,128,创建订单,401,,创建订单 4-291,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,128,0,127
+1789703077495,194,创建订单,401,,创建订单 4-93,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,194,0,192
+1789703077497,181,创建订单,401,,创建订单 4-39,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,181,0,180
+1789703077494,215,创建订单,401,,创建订单 4-8,text,false,"HTTP=401, JSON code=401",490,386,300,602,http://localhost:8082/order/create,215,0,215
+1789703077724,1,订单查询,401,,订单查询 6-16,text,false,"HTTP=401, JSON code=401",490,160,1,604,http://localhost:8082/order/list?page=0&size=10&status=0,1,0,0
+1789703077509,154,创建订单,401,,创建订单 4-198,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,154,0,48
+1789703078122,13,房源详情,200,,房源详情 2-14,text,true,,1004,123,1,593,http://localhost:8082/room/5,13,0,1
+1789703077496,240,创建订单,401,,创建订单 4-114,text,false,"HTTP=401, JSON code=401",490,386,300,604,http://localhost:8082/order/create,240,0,239
+1789703077504,166,创建订单,401,,创建订单 4-153,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,166,0,165
+1789703077495,238,创建订单,401,,创建订单 4-56,text,false,"HTTP=401, JSON code=401",490,386,300,604,http://localhost:8082/order/create,238,0,236
+1789703077507,145,创建订单,401,,创建订单 4-201,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,145,0,41
+1789703077498,172,创建订单,401,,创建订单 4-83,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,172,0,171
+1789703078101,20,房源浏览,200,,房源浏览 1-14,text,true,,2427,198,1,593,http://localhost:8082/room/list?homestayId=1&page=1&size=10&bedType=&keyword=&status=1&priceRange=0-500,20,0,2
+1789703077503,138,创建订单,401,,创建订单 4-118,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,138,0,59
+1789703077499,206,创建订单,401,,创建订单 4-196,text,false,"HTTP=401, JSON code=401",490,386,300,601,http://localhost:8082/order/create,206,0,205
+1789703077680,956,批量创建订单,401,,批量创建订单 5-235,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,956,0,954
+1789703077636,1034,批量创建订单,401,,批量创建订单 5-45,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1034,0,1033
+1789703077668,926,批量创建订单,401,,批量创建订单 5-179,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,926,0,923
+1789703077675,939,批量创建订单,401,,批量创建订单 5-209,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,939,0,937
+1789703077679,946,批量创建订单,401,,批量创建订单 5-229,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,946,0,940
+1789703077667,926,批量创建订单,401,,批量创建订单 5-182,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,926,0,924
+1789703077678,942,批量创建订单,401,,批量创建订单 5-227,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,941,0,941
+1789703077669,924,批量创建订单,401,,批量创建订单 5-184,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,924,0,922
+1789703077666,927,批量创建订单,401,,批量创建订单 5-174,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,927,0,925
+1789703077630,1055,批量创建订单,401,,批量创建订单 5-14,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1055,0,1053
+1789703077628,1058,批量创建订单,401,,批量创建订单 5-5,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1058,0,1057
+1789703077695,983,批量创建订单,401,,批量创建订单 5-281,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,983,0,982
+1789703077683,956,批量创建订单,401,,批量创建订单 5-245,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,956,0,953
+1789703077678,950,批量创建订单,401,,批量创建订单 5-212,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,949,0,940
+1789703077675,941,批量创建订单,401,,批量创建订单 5-219,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,941,0,940
+1789703077648,1062,批量创建订单,401,,批量创建订单 5-94,text,false,"HTTP=401, JSON code=401",490,679,300,301,http://localhost:8082/order/batch-create,1062,0,1061
+1789703077664,944,批量创建订单,401,,批量创建订单 5-161,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,944,0,942
+1789703077674,934,批量创建订单,401,,批量创建订单 5-198,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,934,0,931
+1789703077679,948,批量创建订单,401,,批量创建订单 5-226,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,948,0,940
+1789703077673,928,批量创建订单,401,,批量创建订单 5-190,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,928,0,922
+1789703077664,945,批量创建订单,401,,批量创建订单 5-162,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,945,0,944
+1789703077653,1066,批量创建订单,401,,批量创建订单 5-110,text,false,"HTTP=401, JSON code=401",490,679,300,301,http://localhost:8082/order/batch-create,1066,0,1065
+1789703077674,935,批量创建订单,401,,批量创建订单 5-197,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,935,0,934
+1789703077653,971,批量创建订单,401,,批量创建订单 5-131,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,971,0,966
+1789703077675,938,批量创建订单,401,,批量创建订单 5-201,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,938,0,935
+1789703077670,924,批量创建订单,401,,批量创建订单 5-188,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,924,0,922
+1789703077669,928,批量创建订单,401,,批量创建订单 5-181,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,928,0,922
+1789703077633,1059,批量创建订单,401,,批量创建订单 5-31,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1059,0,1057
+1789703077651,1002,批量创建订单,401,,批量创建订单 5-100,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1002,0,1001
+1789703077677,952,批量创建订单,401,,批量创建订单 5-210,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,952,0,941
+1789703077666,927,批量创建订单,401,,批量创建订单 5-180,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,927,0,925
+1789703077675,939,批量创建订单,401,,批量创建订单 5-215,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,939,0,937
+1789703077665,939,批量创建订单,401,,批量创建订单 5-164,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,939,0,936
+1789703077685,959,批量创建订单,401,,批量创建订单 5-252,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,959,0,958
+1789703077681,956,批量创建订单,401,,批量创建订单 5-238,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,956,0,954
+1789703077641,1056,批量创建订单,401,,批量创建订单 5-65,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1056,0,1055
+1789703077660,949,批量创建订单,401,,批量创建订单 5-160,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,949,0,948
+1789703077653,976,批量创建订单,401,,批量创建订单 5-134,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,976,0,965
+1789703077666,927,批量创建订单,401,,批量创建订单 5-177,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,927,0,925
+1789703077670,924,批量创建订单,401,,批量创建订单 5-187,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,924,0,922
+1789703077614,980,批量创建订单,401,,批量创建订单 5-300,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,980,0,977
+1789703077697,987,批量创建订单,401,,批量创建订单 5-289,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,987,0,986
+1789703077675,935,批量创建订单,401,,批量创建订单 5-202,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,935,0,934
+1789703077695,985,批量创建订单,401,,批量创建订单 5-280,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,985,0,983
+1789703077653,976,批量创建订单,401,,批量创建订单 5-132,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,976,0,964
+1789703077674,934,批量创建订单,401,,批量创建订单 5-196,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,934,0,932
+1789703077680,954,批量创建订单,401,,批量创建订单 5-234,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,954,0,952
+1789703077639,1026,批量创建订单,401,,批量创建订单 5-51,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1026,0,1025
+1789703077633,1058,批量创建订单,401,,批量创建订单 5-25,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1058,0,1057
+1789703077673,931,批量创建订单,401,,批量创建订单 5-189,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,931,0,929
+1789703077702,987,批量创建订单,401,,批量创建订单 5-297,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,987,0,984
+1789703077678,946,批量创建订单,401,,批量创建订单 5-228,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,946,0,941
+1789703077676,944,批量创建订单,401,,批量创建订单 5-222,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,944,0,942
+1789703077655,959,批量创建订单,401,,批量创建订单 5-143,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,959,0,958
+1789703077674,930,批量创建订单,401,,批量创建订单 5-193,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,930,0,929
+1789703077668,925,批量创建订单,401,,批量创建订单 5-183,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,925,0,923
+1789703077666,1067,批量创建订单,401,,批量创建订单 5-163,text,false,"HTTP=401, JSON code=401",490,679,300,301,http://localhost:8082/order/batch-create,1067,0,1065
+1789703077675,935,批量创建订单,401,,批量创建订单 5-200,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,935,0,934
+1789703077651,996,批量创建订单,401,,批量创建订单 5-105,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,996,0,990
+1789703077655,979,批量创建订单,401,,批量创建订单 5-138,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,979,0,958
+1789703077637,1033,批量创建订单,401,,批量创建订单 5-47,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1033,0,1031
+1789703077681,956,批量创建订单,401,,批量创建订单 5-239,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,956,0,954
+1789703077684,956,批量创建订单,401,,批量创建订单 5-247,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,956,0,955
+1789703077646,1062,批量创建订单,401,,批量创建订单 5-92,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1062,0,1060
+1789703077675,958,批量创建订单,401,,批量创建订单 5-218,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,958,0,939
+1789703077665,940,批量创建订单,401,,批量创建订单 5-167,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,940,0,939
+1789703077629,1056,批量创建订单,401,,批量创建订单 5-10,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1056,0,1055
+1789703077655,959,批量创建订单,401,,批量创建订单 5-145,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,959,0,959
+1789703077686,980,批量创建订单,401,,批量创建订单 5-260,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,980,0,978
+1789703077665,941,批量创建订单,401,,批量创建订单 5-169,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,941,0,939
+1789703077703,901,批量创建订单,401,,批量创建订单 5-299,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,901,0,898
+1789703077634,1040,批量创建订单,401,,批量创建订单 5-33,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1040,0,1039
+1789703077631,1050,批量创建订单,401,,批量创建订单 5-22,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1050,0,1049
+1789703077690,981,批量创建订单,401,,批量创建订单 5-266,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,981,0,980
+1789703077675,957,批量创建订单,401,,批量创建订单 5-214,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,957,0,936
+1789703077685,961,批量创建订单,401,,批量创建订单 5-251,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,961,0,960
+1789703077676,953,批量创建订单,401,,批量创建订单 5-225,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,953,0,941
+1789703077639,1057,批量创建订单,401,,批量创建订单 5-59,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1057,0,1056
+1789703077652,985,批量创建订单,401,,批量创建订单 5-120,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,985,0,983
+1789703077654,980,批量创建订单,401,,批量创建订单 5-144,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,980,0,978
+1789703077679,952,批量创建订单,401,,批量创建订单 5-220,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,952,0,940
+1789703077646,1060,批量创建订单,401,,批量创建订单 5-88,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1060,0,1059
+1789703077683,956,批量创建订单,401,,批量创建订单 5-243,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,956,0,953
+1789703077684,962,批量创建订单,401,,批量创建订单 5-249,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,962,0,961
+1789703077652,986,批量创建订单,401,,批量创建订单 5-111,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,986,0,983
+1789703077685,958,批量创建订单,401,,批量创建订单 5-250,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,958,0,956
+1789703077666,1067,批量创建订单,401,,批量创建订单 5-173,text,false,"HTTP=401, JSON code=401",490,679,300,301,http://localhost:8082/order/batch-create,1067,0,1065
+1789703078747,142,文件上传,200,,文件上传 10-5,text,true,,605,1205526,1,303,http://localhost:8082/upload/image,140,0,5
+1789703077674,930,批量创建订单,401,,批量创建订单 5-192,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,930,0,929
+1789703077651,988,批量创建订单,401,,批量创建订单 5-121,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,988,0,987
+1789703077676,957,批量创建订单,401,,批量创建订单 5-216,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,957,0,939
+1789703077673,931,批量创建订单,401,,批量创建订单 5-191,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,931,0,929
+1789703077694,984,批量创建订单,401,,批量创建订单 5-269,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,984,0,982
+1789703077621,972,批量创建订单,401,,批量创建订单 5-1,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,972,0,970
+1789703077669,925,批量创建订单,401,,批量创建订单 5-185,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,925,0,922
+1789703077689,981,批量创建订单,401,,批量创建订单 5-263,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,981,0,979
+1789703077690,984,批量创建订单,401,,批量创建订单 5-265,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,984,0,981
+1789703077650,1061,批量创建订单,401,,批量创建订单 5-101,text,false,"HTTP=401, JSON code=401",490,679,300,301,http://localhost:8082/order/batch-create,1061,0,1060
+1789703077684,955,批量创建订单,401,,批量创建订单 5-246,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,955,0,952
+1789703077676,954,批量创建订单,401,,批量创建订单 5-223,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,954,0,939
+1789703077675,959,批量创建订单,401,,批量创建订单 5-203,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,959,0,935
+1789703077679,954,批量创建订单,401,,批量创建订单 5-230,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,954,0,950
+1789703077676,940,批量创建订单,401,,批量创建订单 5-217,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,940,0,939
+1789703077631,1050,批量创建订单,401,,批量创建订单 5-28,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1050,0,1047
+1789703077638,1030,批量创建订单,401,,批量创建订单 5-49,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1030,0,1029
+1789703077626,1063,批量创建订单,401,,批量创建订单 5-6,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1063,0,1061
+1789703077645,1055,批量创建订单,401,,批量创建订单 5-77,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1055,0,1054
+1789703077686,981,批量创建订单,401,,批量创建订单 5-261,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,981,0,980
+1789703077695,985,批量创建订单,401,,批量创建订单 5-282,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,985,0,983
+1789703077631,1053,批量创建订单,401,,批量创建订单 5-18,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1053,0,1050
+1789703077695,986,批量创建订单,401,,批量创建订单 5-283,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,986,0,985
+1789703077650,1062,批量创建订单,401,,批量创建订单 5-97,text,false,"HTTP=401, JSON code=401",490,679,300,301,http://localhost:8082/order/batch-create,1062,0,1061
+1789703077646,1063,批量创建订单,401,,批量创建订单 5-90,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1063,0,1060
+1789703077694,980,批量创建订单,401,,批量创建订单 5-274,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,980,0,980
+1789703077651,1014,批量创建订单,401,,批量创建订单 5-102,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1014,0,1013
+1789703077693,981,批量创建订单,401,,批量创建订单 5-270,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,981,0,980
+1789703077686,980,批量创建订单,401,,批量创建订单 5-256,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,980,0,979
+1789703077675,959,批量创建订单,401,,批量创建订单 5-204,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,959,0,936
+1789703077666,935,批量创建订单,401,,批量创建订单 5-170,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,935,0,928
+1789703077630,1055,批量创建订单,401,,批量创建订单 5-12,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1055,0,1053
+1789703077660,971,批量创建订单,401,,批量创建订单 5-154,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,971,0,950
+1789703077674,935,批量创建订单,401,,批量创建订单 5-195,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,935,0,933
+1789703077651,990,批量创建订单,401,,批量创建订单 5-115,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,990,0,989
+1789703077643,1056,批量创建订单,401,,批量创建订单 5-66,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1056,0,1054
+1789703077690,983,批量创建订单,401,,批量创建订单 5-267,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,983,0,981
+1789703077653,981,批量创建订单,401,,批量创建订单 5-119,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,981,0,978
+1789703077651,995,批量创建订单,401,,批量创建订单 5-108,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,995,0,995
+1789703077660,1070,批量创建订单,401,,批量创建订单 5-159,text,false,"HTTP=401, JSON code=401",490,679,300,301,http://localhost:8082/order/batch-create,1070,0,1069
+1789703077698,987,批量创建订单,401,,批量创建订单 5-293,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,987,0,986
+1789703077666,1067,批量创建订单,401,,批量创建订单 5-178,text,false,"HTTP=401, JSON code=401",490,679,300,301,http://localhost:8082/order/batch-create,1067,0,1065
+1789703077639,1027,批量创建订单,401,,批量创建订单 5-52,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1027,0,1025
+1789703077630,1059,批量创建订单,401,,批量创建订单 5-13,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1059,0,1059
+1789703077694,981,批量创建订单,401,,批量创建订单 5-273,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,981,0,980
+1789703077676,954,批量创建订单,401,,批量创建订单 5-224,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,954,0,940
+1789703077684,956,批量创建订单,401,,批量创建订单 5-248,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,956,0,955
+1789703077682,956,批量创建订单,401,,批量创建订单 5-242,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,956,0,953
+1789703077635,1039,批量创建订单,401,,批量创建订单 5-39,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1039,0,1036
+1789703077694,981,批量创建订单,401,,批量创建订单 5-275,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,981,0,980
+1789703077669,925,批量创建订单,401,,批量创建订单 5-186,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,925,0,923
+1789703077643,1056,批量创建订单,401,,批量创建订单 5-71,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1056,0,1054
+1789703077694,981,批量创建订单,401,,批量创建订单 5-272,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,981,0,980
+1789703077683,955,批量创建订单,401,,批量创建订单 5-244,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,955,0,953
+1789703077699,987,批量创建订单,401,,批量创建订单 5-294,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,987,0,986
+1789703077639,1056,批量创建订单,401,,批量创建订单 5-53,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1056,0,1054
+1789703077626,1063,批量创建订单,401,,批量创建订单 5-9,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1063,0,1062
+1789703077679,953,批量创建订单,401,,批量创建订单 5-231,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,953,0,947
+1789703077674,950,批量创建订单,401,,批量创建订单 5-199,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,950,0,935
+1789703077651,995,批量创建订单,401,,批量创建订单 5-116,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,995,0,994
+1789703077653,964,批量创建订单,401,,批量创建订单 5-135,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,964,0,963
+1789703077645,1057,批量创建订单,401,,批量创建订单 5-81,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1057,0,1055
+1789703077674,931,批量创建订单,401,,批量创建订单 5-194,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,931,0,930
+1789703077658,956,批量创建订单,401,,批量创建订单 5-153,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,956,0,953
+1789703077652,986,批量创建订单,401,,批量创建订单 5-125,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,986,0,984
+1789703077634,1040,批量创建订单,401,,批量创建订单 5-38,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1040,0,1039
+1789703077680,954,批量创建订单,401,,批量创建订单 5-232,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,954,0,950
+1789703077633,1045,批量创建订单,401,,批量创建订单 5-30,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1044,0,1043
+1789703077653,965,批量创建订单,401,,批量创建订单 5-127,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,965,0,964
+1789703077666,937,批量创建订单,401,,批量创建订单 5-176,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,937,0,935
+1789703077676,958,批量创建订单,401,,批量创建订单 5-213,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,958,0,955
+1789703077676,957,批量创建订单,401,,批量创建订单 5-221,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,957,0,939
+1789703077623,1066,批量创建订单,401,,批量创建订单 5-2,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1066,0,1064
+1789703077658,1071,批量创建订单,401,,批量创建订单 5-151,text,false,"HTTP=401, JSON code=401",490,679,300,301,http://localhost:8082/order/batch-create,1071,0,1066
+1789703077675,959,批量创建订单,401,,批量创建订单 5-205,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,959,0,936
+1789703077652,983,批量创建订单,401,,批量创建订单 5-123,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,983,0,982
+1789703077634,1058,批量创建订单,401,,批量创建订单 5-34,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1058,0,1057
+1789703077643,1056,批量创建订单,401,,批量创建订单 5-69,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1056,0,1054
+1789703077643,1056,批量创建订单,401,,批量创建订单 5-62,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1056,0,1054
+1789703077675,956,批量创建订单,401,,批量创建订单 5-207,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,956,0,938
+1789703077686,983,批量创建订单,401,,批量创建订单 5-258,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,983,0,982
+1789703077658,1071,批量创建订单,401,,批量创建订单 5-152,text,false,"HTTP=401, JSON code=401",490,679,300,301,http://localhost:8082/order/batch-create,1071,0,1068
+1789703077653,1065,批量创建订单,401,,批量创建订单 5-129,text,false,"HTTP=401, JSON code=401",490,679,300,301,http://localhost:8082/order/batch-create,1065,0,1063
+1789703077653,1068,批量创建订单,401,,批量创建订单 5-122,text,false,"HTTP=401, JSON code=401",490,679,300,301,http://localhost:8082/order/batch-create,1068,0,1066
+1789703077631,1060,批量创建订单,401,,批量创建订单 5-16,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1060,0,1059
+1789703077686,979,批量创建订单,401,,批量创建订单 5-253,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,979,0,978
+1789703077650,1059,批量创建订单,401,,批量创建订单 5-95,text,false,"HTTP=401, JSON code=401",490,679,300,301,http://localhost:8082/order/batch-create,1059,0,1059
+1789703077651,988,批量创建订单,401,,批量创建订单 5-118,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,988,0,987
+1789703077651,990,批量创建订单,401,,批量创建订单 5-107,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,990,0,989
+1789703077630,1060,批量创建订单,401,,批量创建订单 5-17,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1060,0,1059
+1789703077652,985,批量创建订单,401,,批量创建订单 5-124,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,985,0,983
+1789703077636,1057,批量创建订单,401,,批量创建订单 5-46,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1057,0,1055
+1789703077655,961,批量创建订单,401,,批量创建订单 5-142,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,961,0,960
+1789703077630,1055,批量创建订单,401,,批量创建订单 5-15,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1055,0,1053
+1789703077665,1065,批量创建订单,401,,批量创建订单 5-166,text,false,"HTTP=401, JSON code=401",490,679,300,301,http://localhost:8082/order/batch-create,1065,0,1064
+1789703077696,985,批量创建订单,401,,批量创建订单 5-285,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,985,0,984
+1789703077699,989,批量创建订单,401,,批量创建订单 5-295,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,989,0,987
+1789703077650,1063,批量创建订单,401,,批量创建订单 5-99,text,false,"HTTP=401, JSON code=401",490,679,300,301,http://localhost:8082/order/batch-create,1063,0,1061
+1789703077702,987,批量创建订单,401,,批量创建订单 5-298,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,987,0,985
+1789703077644,1056,批量创建订单,401,,批量创建订单 5-74,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1056,0,1054
+1789703077654,963,批量创建订单,401,,批量创建订单 5-140,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,963,0,962
+1789703077686,982,批量创建订单,401,,批量创建订单 5-257,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,982,0,981
+1789703077630,1055,批量创建订单,401,,批量创建订单 5-11,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1055,0,1053
+1789703077651,996,批量创建订单,401,,批量创建订单 5-104,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,996,0,995
+1789703077646,1056,批量创建订单,401,,批量创建订单 5-86,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1056,0,1055
+1789703077651,1014,批量创建订单,401,,批量创建订单 5-109,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1014,0,1012
+1789703077635,1057,批量创建订单,401,,批量创建订单 5-41,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1057,0,1056
+1789703077639,1027,批量创建订单,401,,批量创建订单 5-50,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1027,0,1026
+1789703077624,1065,批量创建订单,401,,批量创建订单 5-4,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1065,0,1062
+1789703077701,987,批量创建订单,401,,批量创建订单 5-296,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,987,0,985
+1789703077646,1057,批量创建订单,401,,批量创建订单 5-84,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1057,0,1055
+1789703077646,1058,批量创建订单,401,,批量创建订单 5-83,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1058,0,1055
+1789703077652,987,批量创建订单,401,,批量创建订单 5-114,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,987,0,984
+1789703077656,1069,批量创建订单,401,,批量创建订单 5-148,text,false,"HTTP=401, JSON code=401",490,679,300,301,http://localhost:8082/order/batch-create,1069,0,1068
+1789703077651,1012,批量创建订单,401,,批量创建订单 5-113,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1012,0,994
+1789703077633,1045,批量创建订单,401,,批量创建订单 5-29,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1044,0,1043
+1789703077697,988,批量创建订单,401,,批量创建订单 5-286,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,988,0,984
+1789703077640,1056,批量创建订单,401,,批量创建订单 5-64,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1056,0,1056
+1789703077691,983,批量创建订单,401,,批量创建订单 5-268,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,983,0,980
+1789703077639,1056,批量创建订单,401,,批量创建订单 5-57,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1056,0,1055
+1789703077640,1056,批量创建订单,401,,批量创建订单 5-58,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1056,0,1055
+1789703077640,1056,批量创建订单,401,,批量创建订单 5-63,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1056,0,1055
+1789703077656,1072,批量创建订单,401,,批量创建订单 5-150,text,false,"HTTP=401, JSON code=401",490,679,300,301,http://localhost:8082/order/batch-create,1072,0,1068
+1789703077697,988,批量创建订单,401,,批量创建订单 5-291,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,988,0,986
+1789703077632,1049,批量创建订单,401,,批量创建订单 5-23,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1049,0,1046
+1789703077689,981,批量创建订单,401,,批量创建订单 5-233,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,981,0,980
+1789703077675,958,批量创建订单,401,,批量创建订单 5-208,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,958,0,936
+1789703077678,954,批量创建订单,401,,批量创建订单 5-211,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,954,0,951
+1789703077653,980,批量创建订单,401,,批量创建订单 5-126,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,980,0,977
+1789703077651,1065,批量创建订单,401,,批量创建订单 5-106,text,false,"HTTP=401, JSON code=401",490,679,300,301,http://localhost:8082/order/batch-create,1065,0,1063
+1789703077650,1060,批量创建订单,401,,批量创建订单 5-96,text,false,"HTTP=401, JSON code=401",490,679,300,301,http://localhost:8082/order/batch-create,1060,0,1059
+1789703077676,957,批量创建订单,401,,批量创建订单 5-206,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,957,0,940
+1789703077645,1055,批量创建订单,401,,批量创建订单 5-76,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1055,0,1053
+1789703077689,981,批量创建订单,401,,批量创建订单 5-264,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,981,0,981
+1789703078738,8,购物车查询,401,,购物车查询 9-17,text,false,"HTTP=401, JSON code=401",490,167,1,302,http://localhost:8082/cart/list,7,0,2
+1789703077640,1056,批量创建订单,401,,批量创建订单 5-70,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1056,0,1055
+1789703077645,1057,批量创建订单,401,,批量创建订单 5-80,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1057,0,1055
+1789703077647,1062,批量创建订单,401,,批量创建订单 5-91,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1062,0,1059
+1789703077658,978,批量创建订单,401,,批量创建订单 5-156,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,978,0,976
+1789703077666,1067,批量创建订单,401,,批量创建订单 5-175,text,false,"HTTP=401, JSON code=401",490,679,300,301,http://localhost:8082/order/batch-create,1067,0,1065
+1789703077658,1073,批量创建订单,401,,批量创建订单 5-155,text,false,"HTTP=401, JSON code=401",490,679,300,301,http://localhost:8082/order/batch-create,1073,0,1071
+1789703077650,1061,批量创建订单,401,,批量创建订单 5-98,text,false,"HTTP=401, JSON code=401",490,679,300,301,http://localhost:8082/order/batch-create,1061,0,1060
+1789703079040,13,日期可订性,200,,日期可订性 3-12,text,true,,893,180,1,303,http://localhost:8082/room/calendar?roomId=12&startDate=2026-10-01&endDate=2026-10-07,12,0,2
+1789703077666,938,批量创建订单,401,,批量创建订单 5-168,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,938,0,935
+1789703077681,956,批量创建订单,401,,批量创建订单 5-236,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,956,0,954
+1789703077650,1059,批量创建订单,401,,批量创建订单 5-85,text,false,"HTTP=401, JSON code=401",490,679,300,301,http://localhost:8082/order/batch-create,1059,0,1059
+1789703077695,983,批量创建订单,401,,批量创建订单 5-279,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,982,0,981
+1789703077654,1069,批量创建订单,401,,批量创建订单 5-136,text,false,"HTTP=401, JSON code=401",490,679,300,301,http://localhost:8082/order/batch-create,1069,0,1067
+1789703077640,1057,批量创建订单,401,,批量创建订单 5-68,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1057,0,1056
+1789703077696,985,批量创建订单,401,,批量创建订单 5-284,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,985,0,984
+1789703077681,956,批量创建订单,401,,批量创建订单 5-240,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,956,0,954
+1789703077643,1054,批量创建订单,401,,批量创建订单 5-67,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1054,0,1053
+1789703077644,1055,批量创建订单,401,,批量创建订单 5-73,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1055,0,1053
+1789703077697,987,批量创建订单,401,,批量创建订单 5-288,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,987,0,985
+1789703077639,1057,批量创建订单,401,,批量创建订单 5-60,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1057,0,1056
+1789703077631,1050,批量创建订单,401,,批量创建订单 5-26,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1050,0,1049
+1789703077655,1068,批量创建订单,401,,批量创建订单 5-141,text,false,"HTTP=401, JSON code=401",490,679,300,301,http://localhost:8082/order/batch-create,1068,0,1066
+1789703077640,1056,批量创建订单,401,,批量创建订单 5-55,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1056,0,1055
+1789703077634,1040,批量创建订单,401,,批量创建订单 5-37,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1040,0,1039
+1789703077655,979,批量创建订单,401,,批量创建订单 5-146,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,979,0,976
+1789703077686,979,批量创建订单,401,,批量创建订单 5-255,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,979,0,978
+1789703077694,981,批量创建订单,401,,批量创建订单 5-277,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,981,0,980
+1789703077660,950,批量创建订单,401,,批量创建订单 5-158,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,950,0,949
+1789703077636,1036,批量创建订单,401,,批量创建订单 5-40,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1036,0,1034
+1789703078723,22,订单查询,401,,订单查询 6-17,text,false,"HTTP=401, JSON code=401",490,160,1,302,http://localhost:8082/order/list?page=0&size=10&status=0,22,0,12
+1789703077636,1036,批量创建订单,401,,批量创建订单 5-42,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1036,0,1034
+1789703077686,983,批量创建订单,401,,批量创建订单 5-259,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,983,0,982
+1789703077645,1057,批量创建订单,401,,批量创建订单 5-79,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1057,0,1055
+1789703077665,1065,批量创建订单,401,,批量创建订单 5-165,text,false,"HTTP=401, JSON code=401",490,679,300,301,http://localhost:8082/order/batch-create,1065,0,1064
+1789703077626,1062,批量创建订单,401,,批量创建订单 5-7,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1062,0,1060
+1789703077686,980,批量创建订单,401,,批量创建订单 5-254,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,980,0,979
+1789703077652,1066,批量创建订单,401,,批量创建订单 5-112,text,false,"HTTP=401, JSON code=401",490,679,300,301,http://localhost:8082/order/batch-create,1066,0,1064
+1789703077634,1039,批量创建订单,401,,批量创建订单 5-35,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1039,0,1037
+1789703077645,1057,批量创建订单,401,,批量创建订单 5-78,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1057,0,1055
+1789703077645,1054,批量创建订单,401,,批量创建订单 5-75,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1054,0,1053
+1789703077682,955,批量创建订单,401,,批量创建订单 5-241,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,955,0,953
+1789703077666,1066,批量创建订单,401,,批量创建订单 5-172,text,false,"HTTP=401, JSON code=401",490,679,300,301,http://localhost:8082/order/batch-create,1066,0,1064
+1789703077638,1030,批量创建订单,401,,批量创建订单 5-48,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1030,0,1029
+1789703077694,981,批量创建订单,401,,批量创建订单 5-278,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,981,0,980
+1789703077665,941,批量创建订单,401,,批量创建订单 5-171,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,941,0,939
+1789703077636,1034,批量创建订单,401,,批量创建订单 5-44,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1034,0,1034
+1789703077652,1065,批量创建订单,401,,批量创建订单 5-103,text,false,"HTTP=401, JSON code=401",490,679,300,301,http://localhost:8082/order/batch-create,1065,0,1064
+1789703077634,1042,批量创建订单,401,,批量创建订单 5-27,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1042,0,1041
+1789703077655,978,批量创建订单,401,,批量创建订单 5-139,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,978,0,960
+1789703077660,1071,批量创建订单,401,,批量创建订单 5-157,text,false,"HTTP=401, JSON code=401",490,679,300,301,http://localhost:8082/order/batch-create,1071,0,1069
+1789703077634,1059,批量创建订单,401,,批量创建订单 5-32,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1059,0,1057
+1789703077698,987,批量创建订单,401,,批量创建订单 5-292,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,987,0,986
+1789703077653,980,批量创建订单,401,,批量创建订单 5-130,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,980,0,977
+1789703077652,1065,批量创建订单,401,,批量创建订单 5-128,text,false,"HTTP=401, JSON code=401",490,679,300,301,http://localhost:8082/order/batch-create,1065,0,1064
+1789703077655,1068,批量创建订单,401,,批量创建订单 5-147,text,false,"HTTP=401, JSON code=401",490,679,300,301,http://localhost:8082/order/batch-create,1068,0,1067
+1789703077686,984,批量创建订单,401,,批量创建订单 5-262,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,984,0,982
+1789703077631,1053,批量创建订单,401,,批量创建订单 5-20,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1053,0,1050
+1789703077699,988,批量创建订单,401,,批量创建订单 5-290,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,988,0,987
+1789703079209,3,加入购物车,401,,加入购物车 8-12,text,false,"HTTP=401, JSON code=401",490,272,1,302,http://localhost:8082/cart/add,3,0,1
+1789703077651,995,批量创建订单,401,,批量创建订单 5-117,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,995,0,994
+1789703077656,976,批量创建订单,401,,批量创建订单 5-149,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,976,0,955
+1789703077639,1056,批量创建订单,401,,批量创建订单 5-54,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1056,0,1055
+1789703077640,1057,批量创建订单,401,,批量创建订单 5-56,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1057,0,1056
+1789703077645,1058,批量创建订单,401,,批量创建订单 5-82,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1058,0,1056
+1789703077646,1059,批量创建订单,401,,批量创建订单 5-87,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1059,0,1056
+1789703077640,1056,批量创建订单,401,,批量创建订单 5-61,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1056,0,1055
+1789703077644,1056,批量创建订单,401,,批量创建订单 5-72,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1056,0,1054
+1789703077694,981,批量创建订单,401,,批量创建订单 5-276,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,981,0,980
+1789703077626,1063,批量创建订单,401,,批量创建订单 5-8,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1063,0,1060
+1789703077634,1058,批量创建订单,401,,批量创建订单 5-36,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1058,0,1057
+1789703077624,1065,批量创建订单,401,,批量创建订单 5-3,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1065,0,1063
+1789703077631,1050,批量创建订单,401,,批量创建订单 5-21,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1050,0,1049
+1789703077646,1062,批量创建订单,401,,批量创建订单 5-89,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1062,0,1059
+1789703077647,1062,批量创建订单,401,,批量创建订单 5-93,text,false,"HTTP=401, JSON code=401",490,679,300,301,http://localhost:8082/order/batch-create,1062,0,1061
+1789703077653,1068,批量创建订单,401,,批量创建订单 5-133,text,false,"HTTP=401, JSON code=401",490,679,300,301,http://localhost:8082/order/batch-create,1068,0,1066
+1789703077681,957,批量创建订单,401,,批量创建订单 5-237,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,957,0,954
+1789703077693,981,批量创建订单,401,,批量创建订单 5-271,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,981,0,981
+1789703077636,1034,批量创建订单,401,,批量创建订单 5-43,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1034,0,1033
+1789703077654,1069,批量创建订单,401,,批量创建订单 5-137,text,false,"HTTP=401, JSON code=401",490,679,300,301,http://localhost:8082/order/batch-create,1069,0,1066
+1789703077697,986,批量创建订单,401,,批量创建订单 5-287,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,986,0,984
+1789703077633,1045,批量创建订单,401,,批量创建订单 5-24,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1044,0,1043
+1789703077631,1060,批量创建订单,401,,批量创建订单 5-19,text,false,"HTTP=401, JSON code=401",490,679,300,300,http://localhost:8082/order/batch-create,1060,0,1059
+1789703079319,13,房源详情,200,,房源详情 2-15,text,true,,1048,123,1,292,http://localhost:8082/room/6,13,0,1
+1789703079303,13,房源浏览,200,,房源浏览 1-15,text,true,,1750,201,1,296,http://localhost:8082/room/list?homestayId=1&page=1&size=10&bedType=&keyword=&status=1&priceRange=500-1000,13,0,1
+1789703079700,3,订单查询,401,,订单查询 6-18,text,false,"HTTP=401, JSON code=401",490,160,1,1,http://localhost:8082/order/list?page=0&size=10&status=0,3,0,1
+1789703079717,2,购物车查询,401,,购物车查询 9-18,text,false,"HTTP=401, JSON code=401",490,167,1,1,http://localhost:8082/cart/list,2,0,1
+1789703080500,10,房源浏览,200,,房源浏览 1-16,text,true,,3616,193,1,1,http://localhost:8082/room/list?homestayId=1&page=1&size=10&bedType=&keyword=&status=1&priceRange=,10,0,0
+1789703080519,6,房源详情,200,,房源详情 2-16,text,true,,995,123,1,1,http://localhost:8082/room/7,6,0,0
+1789703080536,9,日期可订性,200,,日期可订性 3-13,text,true,,893,180,1,1,http://localhost:8082/room/calendar?roomId=13&startDate=2026-10-01&endDate=2026-10-07,9,0,1
+1789703080700,2,订单查询,401,,订单查询 6-19,text,false,"HTTP=401, JSON code=401",490,160,1,1,http://localhost:8082/order/list?page=0&size=10&status=0,2,0,0
+1789703080710,2,加入购物车,401,,加入购物车 8-13,text,false,"HTTP=401, JSON code=401",490,272,1,1,http://localhost:8082/cart/add,2,0,1
+1789703080716,2,购物车查询,401,,购物车查询 9-19,text,false,"HTTP=401, JSON code=401",490,167,1,1,http://localhost:8082/cart/list,2,0,1
+1789703081697,2,订单查询,401,,订单查询 6-20,text,false,"HTTP=401, JSON code=401",490,160,1,1,http://localhost:8082/order/list?page=0&size=10&status=0,2,0,0
+1789703081700,8,房源浏览,200,,房源浏览 1-17,text,true,,1604,211,1,1,http://localhost:8082/room/list?homestayId=1&page=1&size=20&bedType=&keyword=大床&status=1&priceRange=,8,0,0
+1789703081715,2,购物车查询,401,,购物车查询 9-20,text,false,"HTTP=401, JSON code=401",490,167,1,1,http://localhost:8082/cart/list,2,0,0
+1789703081718,6,房源详情,200,,房源详情 2-17,text,true,,888,124,1,1,http://localhost:8082/room/36,6,0,0
+1789703082034,6,日期可订性,200,,日期可订性 3-14,text,true,,893,180,1,1,http://localhost:8082/room/calendar?roomId=14&startDate=2026-10-01&endDate=2026-10-07,6,0,1
+1789703082209,2,加入购物车,401,,加入购物车 8-14,text,false,"HTTP=401, JSON code=401",490,272,1,1,http://localhost:8082/cart/add,2,0,0
+1789703082697,2,订单查询,401,,订单查询 6-21,text,false,"HTTP=401, JSON code=401",490,160,1,1,http://localhost:8082/order/list?page=0&size=10&status=0,2,0,1
+1789703082715,2,购物车查询,401,,购物车查询 9-21,text,false,"HTTP=401, JSON code=401",490,167,1,1,http://localhost:8082/cart/list,2,0,1
+1789703082899,6,房源浏览,200,,房源浏览 1-18,text,true,,561,211,1,1,http://localhost:8082/room/list?homestayId=1&page=1&size=20&bedType=&keyword=海景&status=1&priceRange=,6,0,1
+1789703082918,6,房源详情,200,,房源详情 2-18,text,true,,901,124,1,1,http://localhost:8082/room/37,6,0,1
+1789703083535,6,日期可订性,200,,日期可订性 3-15,text,true,,893,180,1,1,http://localhost:8082/room/calendar?roomId=15&startDate=2026-10-01&endDate=2026-10-07,6,0,1
+1789703083698,2,订单查询,401,,订单查询 6-22,text,false,"HTTP=401, JSON code=401",490,160,1,1,http://localhost:8082/order/list?page=0&size=10&status=0,2,0,0
+1789703083709,2,加入购物车,401,,加入购物车 8-15,text,false,"HTTP=401, JSON code=401",490,272,1,1,http://localhost:8082/cart/add,2,0,0
+1789703083715,2,购物车查询,401,,购物车查询 9-22,text,false,"HTTP=401, JSON code=401",490,167,1,1,http://localhost:8082/cart/list,2,0,0
+1789703084099,9,房源浏览,200,,房源浏览 1-19,text,true,,979,211,1,1,http://localhost:8082/room/list?homestayId=1&page=1&size=10&bedType=双床&keyword=&status=1&priceRange=,9,0,1
+1789703084119,6,房源详情,200,,房源详情 2-19,text,true,,1088,123,1,1,http://localhost:8082/room/4,6,0,0
+1789703084698,1,订单查询,401,,订单查询 6-23,text,false,"HTTP=401, JSON code=401",490,160,1,1,http://localhost:8082/order/list?page=0&size=10&status=0,1,0,0
+1789703084714,2,购物车查询,401,,购物车查询 9-23,text,false,"HTTP=401, JSON code=401",490,167,1,1,http://localhost:8082/cart/list,2,0,1
+1789703085035,6,日期可订性,200,,日期可订性 3-16,text,true,,893,180,1,1,http://localhost:8082/room/calendar?roomId=16&startDate=2026-10-01&endDate=2026-10-07,6,0,1
+1789703085209,3,加入购物车,401,,加入购物车 8-16,text,false,"HTTP=401, JSON code=401",490,272,1,1,http://localhost:8082/cart/add,3,0,1
+1789703085298,7,房源浏览,200,,房源浏览 1-20,text,true,,1177,219,1,1,http://localhost:8082/room/list?homestayId=1&page=1&size=10&bedType=家庭&keyword=&status=1&priceRange=500-1000,7,0,1
+1789703085318,7,房源详情,200,,房源详情 2-20,text,true,,1004,123,1,1,http://localhost:8082/room/5,7,0,0
+1789703085698,2,订单查询,401,,订单查询 6-24,text,false,"HTTP=401, JSON code=401",490,160,1,1,http://localhost:8082/order/list?page=0&size=10&status=0,2,0,1
+1789703085715,2,购物车查询,401,,购物车查询 9-24,text,false,"HTTP=401, JSON code=401",490,167,1,1,http://localhost:8082/cart/list,2,0,1
+1789703086500,7,房源浏览,200,,房源浏览 1-21,text,true,,561,211,1,1,http://localhost:8082/room/list?homestayId=1&page=1&size=10&bedType=&keyword=温馨&status=1&priceRange=,7,0,0
+1789703086518,6,房源详情,200,,房源详情 2-21,text,true,,1048,123,1,1,http://localhost:8082/room/6,6,0,0
+1789703086535,5,日期可订性,200,,日期可订性 3-17,text,true,,893,180,1,1,http://localhost:8082/room/calendar?roomId=17&startDate=2026-10-01&endDate=2026-10-07,5,0,0
+1789703086697,2,订单查询,401,,订单查询 6-25,text,false,"HTTP=401, JSON code=401",490,160,1,1,http://localhost:8082/order/list?page=0&size=10&status=0,2,0,1
+1789703086709,2,加入购物车,401,,加入购物车 8-17,text,false,"HTTP=401, JSON code=401",490,272,1,1,http://localhost:8082/cart/add,2,0,1
+1789703086715,2,购物车查询,401,,购物车查询 9-25,text,false,"HTTP=401, JSON code=401",490,167,1,1,http://localhost:8082/cart/list,2,0,1
+1789703087698,2,订单查询,401,,订单查询 6-26,text,false,"HTTP=401, JSON code=401",490,160,1,2,http://localhost:8082/order/list?page=0&size=10&status=0,2,0,1
+1789703087698,11,房源浏览,200,,房源浏览 1-22,text,true,,1134,219,1,1,http://localhost:8082/room/list?homestayId=1&page=1&size=10&bedType=亲子&keyword=&status=1&priceRange=500-1000,11,0,1
+1789703087715,2,购物车查询,401,,购物车查询 9-26,text,false,"HTTP=401, JSON code=401",490,167,1,1,http://localhost:8082/cart/list,2,0,0
+1789703087718,9,房源详情,200,,房源详情 2-22,text,true,,995,123,1,1,http://localhost:8082/room/7,9,0,0
+1789703088035,6,日期可订性,200,,日期可订性 3-18,text,true,,893,180,1,1,http://localhost:8082/room/calendar?roomId=18&startDate=2026-10-01&endDate=2026-10-07,6,0,0
+1789703088209,2,加入购物车,401,,加入购物车 8-18,text,false,"HTTP=401, JSON code=401",490,272,1,1,http://localhost:8082/cart/add,2,0,1
+1789703088699,1,订单查询,401,,订单查询 6-27,text,false,"HTTP=401, JSON code=401",490,160,1,1,http://localhost:8082/order/list?page=0&size=10&status=0,1,0,0
+1789703088716,2,购物车查询,401,,购物车查询 9-27,text,false,"HTTP=401, JSON code=401",490,167,1,1,http://localhost:8082/cart/list,2,0,1
+1789703088899,7,房源浏览,200,,房源浏览 1-23,text,true,,561,193,1,1,http://localhost:8082/room/list?homestayId=1&page=2&size=10&bedType=&keyword=&status=1&priceRange=,7,0,1
+1789703088918,6,房源详情,200,,房源详情 2-23,text,true,,888,124,1,1,http://localhost:8082/room/36,6,0,0
+1789703089535,7,日期可订性,200,,日期可订性 3-19,text,true,,893,180,1,1,http://localhost:8082/room/calendar?roomId=19&startDate=2026-10-01&endDate=2026-10-07,7,0,1
+1789703089698,2,订单查询,401,,订单查询 6-28,text,false,"HTTP=401, JSON code=401",490,160,1,1,http://localhost:8082/order/list?page=0&size=10&status=0,2,0,1
+1789703089709,2,加入购物车,401,,加入购物车 8-19,text,false,"HTTP=401, JSON code=401",490,272,1,1,http://localhost:8082/cart/add,2,0,0
+1789703089715,1,购物车查询,401,,购物车查询 9-28,text,false,"HTTP=401, JSON code=401",490,167,1,1,http://localhost:8082/cart/list,1,0,0
+1789703090098,10,房源浏览,200,,房源浏览 1-24,text,true,,3616,198,1,1,http://localhost:8082/room/list?homestayId=1&page=1&size=10&bedType=&keyword=&status=1&priceRange=1000+,10,0,1
+1789703090118,6,房源详情,200,,房源详情 2-24,text,true,,901,124,1,1,http://localhost:8082/room/37,6,0,0
+1789703090698,2,订单查询,401,,订单查询 6-29,text,false,"HTTP=401, JSON code=401",490,160,1,1,http://localhost:8082/order/list?page=0&size=10&status=0,2,0,1
+1789703090714,2,购物车查询,401,,购物车查询 9-29,text,false,"HTTP=401, JSON code=401",490,167,1,1,http://localhost:8082/cart/list,2,0,1
+1789703091035,5,日期可订性,200,,日期可订性 3-20,text,true,,893,180,1,1,http://localhost:8082/room/calendar?roomId=20&startDate=2026-10-01&endDate=2026-10-07,5,0,0
+1789703091209,1,加入购物车,401,,加入购物车 8-20,text,false,"HTTP=401, JSON code=401",490,272,1,1,http://localhost:8082/cart/add,1,0,0
+1789703091299,9,房源浏览,200,,房源浏览 1-25,text,true,,3616,193,1,1,http://localhost:8082/room/list?homestayId=1&page=1&size=10&bedType=&keyword=&status=1&priceRange=,9,0,0
+1789703091318,6,房源详情,200,,房源详情 2-25,text,true,,1088,123,1,1,http://localhost:8082/room/4,6,0,0
+1789703091699,2,订单查询,401,,订单查询 6-30,text,false,"HTTP=401, JSON code=401",490,160,1,1,http://localhost:8082/order/list?page=0&size=10&status=0,2,0,0
+1789703091716,2,购物车查询,401,,购物车查询 9-30,text,false,"HTTP=401, JSON code=401",490,167,1,1,http://localhost:8082/cart/list,2,0,1
+1789703092500,10,房源浏览,200,,房源浏览 1-26,text,true,,2427,198,1,1,http://localhost:8082/room/list?homestayId=1&page=1&size=10&bedType=&keyword=&status=1&priceRange=0-500,10,0,1
+1789703092520,6,房源详情,200,,房源详情 2-26,text,true,,1004,123,1,1,http://localhost:8082/room/5,6,0,1
+1789703093700,10,房源浏览,200,,房源浏览 1-27,text,true,,1750,201,1,1,http://localhost:8082/room/list?homestayId=1&page=1&size=10&bedType=&keyword=&status=1&priceRange=500-1000,10,0,1
+1789703093718,8,房源详情,200,,房源详情 2-27,text,true,,1048,123,1,1,http://localhost:8082/room/6,8,0,1
+1789703094901,10,房源浏览,200,,房源浏览 1-28,text,true,,3616,193,1,1,http://localhost:8082/room/list?homestayId=1&page=1&size=10&bedType=&keyword=&status=1&priceRange=,10,0,1
+1789703094918,7,房源详情,200,,房源详情 2-28,text,true,,995,123,1,1,http://localhost:8082/room/7,7,0,1
+1789703096099,10,房源浏览,200,,房源浏览 1-29,text,true,,1604,211,1,1,http://localhost:8082/room/list?homestayId=1&page=1&size=20&bedType=&keyword=大床&status=1&priceRange=,10,0,1
+1789703096119,6,房源详情,200,,房源详情 2-29,text,true,,888,124,1,1,http://localhost:8082/room/36,6,0,1
+1789703097299,8,房源浏览,200,,房源浏览 1-30,text,true,,561,211,1,1,http://localhost:8082/room/list?homestayId=1&page=1&size=20&bedType=&keyword=海景&status=1&priceRange=,8,0,0
+1789703097319,8,房源详情,200,,房源详情 2-30,text,true,,901,124,1,1,http://localhost:8082/room/37,8,0,0
+1789703098500,8,房源浏览,200,,房源浏览 1-31,text,true,,979,211,1,1,http://localhost:8082/room/list?homestayId=1&page=1&size=10&bedType=双床&keyword=&status=1&priceRange=,8,0,1
+1789703098520,8,房源详情,200,,房源详情 2-31,text,true,,1088,123,1,1,http://localhost:8082/room/4,8,0,0
+1789703099698,10,房源浏览,200,,房源浏览 1-32,text,true,,1177,219,1,1,http://localhost:8082/room/list?homestayId=1&page=1&size=10&bedType=家庭&keyword=&status=1&priceRange=500-1000,10,0,1
+1789703099719,6,房源详情,200,,房源详情 2-32,text,true,,1004,123,1,1,http://localhost:8082/room/5,6,0,0
+1789703100898,6,房源浏览,200,,房源浏览 1-33,text,true,,561,211,1,1,http://localhost:8082/room/list?homestayId=1&page=1&size=10&bedType=&keyword=温馨&status=1&priceRange=,6,0,1
+1789703100918,6,房源详情,200,,房源详情 2-33,text,true,,1048,123,1,1,http://localhost:8082/room/6,6,0,1
+1789703102099,6,房源浏览,200,,房源浏览 1-34,text,true,,1134,219,1,1,http://localhost:8082/room/list?homestayId=1&page=1&size=10&bedType=亲子&keyword=&status=1&priceRange=500-1000,6,0,1
+1789703102118,7,房源详情,200,,房源详情 2-34,text,true,,995,123,1,1,http://localhost:8082/room/7,7,0,1
+1789703103298,8,房源浏览,200,,房源浏览 1-35,text,true,,561,193,1,1,http://localhost:8082/room/list?homestayId=1&page=2&size=10&bedType=&keyword=&status=1&priceRange=,8,0,1
+1789703103318,6,房源详情,200,,房源详情 2-35,text,true,,888,124,1,1,http://localhost:8082/room/36,5,0,0
+1789703104499,9,房源浏览,200,,房源浏览 1-36,text,true,,3616,198,1,1,http://localhost:8082/room/list?homestayId=1&page=1&size=10&bedType=&keyword=&status=1&priceRange=1000+,9,0,0
+1789703104519,6,房源详情,200,,房源详情 2-36,text,true,,901,124,1,1,http://localhost:8082/room/37,6,0,0
+1789703105699,9,房源浏览,200,,房源浏览 1-37,text,true,,3616,193,1,1,http://localhost:8082/room/list?homestayId=1&page=1&size=10&bedType=&keyword=&status=1&priceRange=,9,0,0
+1789703105718,8,房源详情,200,,房源详情 2-37,text,true,,1088,123,1,1,http://localhost:8082/room/4,8,0,1
+1789703106899,10,房源浏览,200,,房源浏览 1-38,text,true,,2427,198,1,1,http://localhost:8082/room/list?homestayId=1&page=1&size=10&bedType=&keyword=&status=1&priceRange=0-500,10,0,0
+1789703106919,7,房源详情,200,,房源详情 2-38,text,true,,1004,123,1,1,http://localhost:8082/room/5,7,0,0
+1789703108099,7,房源浏览,200,,房源浏览 1-39,text,true,,1750,201,1,1,http://localhost:8082/room/list?homestayId=1&page=1&size=10&bedType=&keyword=&status=1&priceRange=500-1000,7,0,0
+1789703108119,7,房源详情,200,,房源详情 2-39,text,true,,1048,123,1,1,http://localhost:8082/room/6,7,0,0
+1789703109298,10,房源浏览,200,,房源浏览 1-40,text,true,,3616,193,1,1,http://localhost:8082/room/list?homestayId=1&page=1&size=10&bedType=&keyword=&status=1&priceRange=,10,0,0
+1789703109320,8,房源详情,200,,房源详情 2-40,text,true,,995,123,1,1,http://localhost:8082/room/7,8,0,0
+1789703110498,8,房源浏览,200,,房源浏览 1-41,text,true,,1604,211,1,1,http://localhost:8082/room/list?homestayId=1&page=1&size=20&bedType=&keyword=大床&status=1&priceRange=,8,0,1
+1789703110519,6,房源详情,200,,房源详情 2-41,text,true,,888,124,1,1,http://localhost:8082/room/36,6,0,1
+1789703111697,7,房源浏览,200,,房源浏览 1-42,text,true,,561,211,1,1,http://localhost:8082/room/list?homestayId=1&page=1&size=20&bedType=&keyword=海景&status=1&priceRange=,7,0,1
+1789703111719,6,房源详情,200,,房源详情 2-42,text,true,,901,124,1,1,http://localhost:8082/room/37,6,0,0
+1789703112898,7,房源浏览,200,,房源浏览 1-43,text,true,,979,211,1,1,http://localhost:8082/room/list?homestayId=1&page=1&size=10&bedType=双床&keyword=&status=1&priceRange=,7,0,1
+1789703112919,6,房源详情,200,,房源详情 2-43,text,true,,1088,123,1,1,http://localhost:8082/room/4,6,0,1
+1789703114098,7,房源浏览,200,,房源浏览 1-44,text,true,,1177,219,1,1,http://localhost:8082/room/list?homestayId=1&page=1&size=10&bedType=家庭&keyword=&status=1&priceRange=500-1000,7,0,0
+1789703114119,6,房源详情,200,,房源详情 2-44,text,true,,1004,123,1,1,http://localhost:8082/room/5,6,0,0
+1789703115297,8,房源浏览,200,,房源浏览 1-45,text,true,,561,211,1,1,http://localhost:8082/room/list?homestayId=1&page=1&size=10&bedType=&keyword=温馨&status=1&priceRange=,8,0,1
+1789703115319,5,房源详情,200,,房源详情 2-45,text,true,,1048,123,1,1,http://localhost:8082/room/6,5,0,1
+1789703116497,7,房源浏览,200,,房源浏览 1-46,text,true,,1134,219,1,1,http://localhost:8082/room/list?homestayId=1&page=1&size=10&bedType=亲子&keyword=&status=1&priceRange=500-1000,7,0,1
+1789703116518,7,房源详情,200,,房源详情 2-46,text,true,,995,123,1,1,http://localhost:8082/room/7,7,0,1
+1789703117698,8,房源浏览,200,,房源浏览 1-47,text,true,,561,193,1,1,http://localhost:8082/room/list?homestayId=1&page=2&size=10&bedType=&keyword=&status=1&priceRange=,8,0,0
+1789703117720,5,房源详情,200,,房源详情 2-47,text,true,,888,124,1,1,http://localhost:8082/room/36,5,0,0
+1789703118898,7,房源浏览,200,,房源浏览 1-48,text,true,,3616,198,1,1,http://localhost:8082/room/list?homestayId=1&page=1&size=10&bedType=&keyword=&status=1&priceRange=1000+,7,0,0
+1789703118919,5,房源详情,200,,房源详情 2-48,text,true,,901,124,1,1,http://localhost:8082/room/37,5,0,0
+1789703120098,9,房源浏览,200,,房源浏览 1-49,text,true,,3616,193,1,1,http://localhost:8082/room/list?homestayId=1&page=1&size=10&bedType=&keyword=&status=1&priceRange=,9,0,0
+1789703120118,7,房源详情,200,,房源详情 2-49,text,true,,1088,123,1,1,http://localhost:8082/room/4,6,0,1
+1789703121298,10,房源浏览,200,,房源浏览 1-50,text,true,,2427,198,1,1,http://localhost:8082/room/list?homestayId=1&page=1&size=10&bedType=&keyword=&status=1&priceRange=0-500,10,0,1
+1789703121319,5,房源详情,200,,房源详情 2-50,text,true,,1004,123,1,1,http://localhost:8082/room/5,5,0,1
